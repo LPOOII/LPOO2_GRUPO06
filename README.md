@@ -1,19 +1,16 @@
-Laboratorio de programación orientada a objetos II
-==================================================
+#Laboratorio de programación orientada a objetos II
 
-# Grupo 6
+## Grupo 6
 
 Este repositorio corresponde al grupo 6, de la materia Laboratorio de programación orientada a objetos 2 del año 2016.
 
-Profesores
-----------
+## Profesores
 
 + Aragón Fabiana
 + Sixto Alberto
 
 
-Integrantes
------------
+## Integrantes
 
 + Escalera Walter
 + Ibañez Alejandro
@@ -26,5 +23,9 @@ Integrantes
 
 # Como empezar
 
-+ Descargar e instalar git
---------------------------
+## Descargar e instalar git
+
+Entrar a la siguiente pagina [Git](https://git-scm.com/downloads) y bajar la version para Windows 2.9.3
+
+### Pasos para instalar.
+
