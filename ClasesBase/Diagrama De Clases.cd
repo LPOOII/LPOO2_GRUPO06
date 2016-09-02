@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ClasesBase.Articulo">
+  <Class Name="ClasesBase.Articulo" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAEAAAJARSAAAMAAIAAhCACAICgCgACAAgAAAAABgAA=</HashCode>
       <FileName>Articulo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesBase.Cliente">
+  <Class Name="ClasesBase.Cliente" Collapsed="true">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAACAAAQAgQgEAAkAAAAIAABAAAAAQAQAAIAECAA=</HashCode>
       <FileName>Cliente.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesBase.Familia">
+  <Class Name="ClasesBase.Familia" Collapsed="true">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAIAAAAAAAAACAAAAAIAAAAAAAAAAA=</HashCode>
@@ -22,20 +22,20 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Historial_Login" Collapsed="true">
-    <Position X="5.5" Y="5" Width="1.5" />
+    <Position X="4" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAkAAAAJAAAAA=</HashCode>
       <FileName>Historial_Login.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesBase.Proveedor">
+  <Class Name="ClasesBase.Proveedor" Collapsed="true">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAgBQEAAAEAAAAIAAAAjAACAAAAAiAAAAAAAAAAIAAA=</HashCode>
       <FileName>Proveedor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesBase.Rol">
+  <Class Name="ClasesBase.Rol" Collapsed="true">
     <Position X="7.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAIAAAAAAIAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
@@ -43,14 +43,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Unidad_Medida" Collapsed="true">
-    <Position X="6.25" Y="3.75" Width="1.5" />
+    <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAIAABAAAAAQAAQAAAAEA=</HashCode>
       <FileName>Unidad_Medida.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesBase.Usuario">
-    <Position X="5.75" Y="5.75" Width="1.5" />
+  <Class Name="ClasesBase.Usuario" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAQAAAAMAAAABBAAACAUAAAgBAAAIAAAAAgAA=</HashCode>
       <FileName>Usuario.cs</FileName>
