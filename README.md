@@ -26,4 +26,5 @@ Integrantes
 
 # Como empezar
 
-
++ Descargar e instalar git
+--------------------------
