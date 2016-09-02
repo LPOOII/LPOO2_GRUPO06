@@ -408,3 +408,6 @@ C:\Users\Paulo\Documents\LPOO1_GRUPO04\Vistas\obj\x86\Debug\Vistas.FrmPedidos.re
 C:\Users\Paulo\Documents\LPOO1_GRUPO04\Vistas\obj\x86\Debug\Vistas.FrmVentas.resources
 C:\Users\Paulo\Documents\LPOO1_GRUPO04\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\Paulo\Documents\LPOO1_GRUPO04\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.pdb
