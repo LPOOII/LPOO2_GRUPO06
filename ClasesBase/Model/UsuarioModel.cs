@@ -48,7 +48,6 @@ namespace ClasesBase
             if (reader.Read() == true)
             {
                 oUsuario = new Usuario();
-
                 oUsuario.Usr_UserName = (string)reader["usr_username"];
                 oUsuario.Usr_Nombre = (string)reader["usr_nombre"];
                 oUsuario.Usr_Apellido = (string)reader["usr_apellido"];
@@ -56,7 +55,6 @@ namespace ClasesBase
                 oUsuario.Rol_Id = (int)reader["rol_id"];
                 oUsuario.Usr_Email = (string)reader["usr_email"];
                 oUsuario.Usr_Id = (int)reader["usr_id"];
-
             }
             cnn.Close();
             return oUsuario;
@@ -85,6 +83,33 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }//fin-insertarUsuario
+
+        public static Usuario login(String username, String password) 
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "Sp_login";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            Usuario usuario = null;
+            if (reader.Read() == true)
+            {
+                usuario = new Usuario();
+                usuario.Usr_UserName = (string)reader["usr_username"];
+                usuario.Usr_Nombre = (string)reader["usr_nombre"];
+                usuario.Usr_Apellido = (string)reader["usr_apellido"];
+                usuario.Usr_Password = (string)reader["usr_password"];
+                usuario.Rol_Id = (int)reader["rol_id"];
+                usuario.Usr_Email = (string)reader["usr_email"];
+                usuario.Usr_Id = (int)reader["usr_id"];
+            }
+            cnn.Close();
+            return usuario;
+        }
 
         public static void insert_auditoria(Historial_Login hl)
         {
