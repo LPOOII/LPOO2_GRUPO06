@@ -29,7 +29,7 @@ namespace Vistas
          */
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Close Application?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+            if (MessageBox.Show("¿Cerrar aplicación?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
             {
                 //this.Close();
             }
