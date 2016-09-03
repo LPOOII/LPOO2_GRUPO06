@@ -14,24 +14,26 @@ using System.Windows.Shapes;
 
 namespace Vistas
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
+    /**
+     * @Author Paulo
+     * Lógica de interacción para MainWindow.xaml
+     **/
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// Raul 
-        /// </summary>
-        // enrrutado de un metodo para cualquier boton
+
+        /**
+         * @Author Raul
+         * @Sumary enrrutado de un metodo para cualquier boton
+         **/
         private void mostrar(object sender, RoutedEventArgs e)
         {
-                    Button btn = (Button)e.OriginalSource;
+            Button btn = (Button)e.OriginalSource;
             // btn: tenemos disponiblidad de todos los metodos
-            txtPassword.Text += btn.Content.ToString();
+            txtPassword.Password += btn.Content.ToString();
 
         }
     }
