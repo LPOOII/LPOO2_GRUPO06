@@ -1,12 +1,10 @@
-ClasesBase/app
 ClasesBase/bin
 ClasesBase/obj
 Vistas/bin
 Vistas/obj
-/ClasesBase/app
-/ClasesBase/bin
-/ClasesBase/obj
-/Vistas/bin
-/Vistas/obj
+ClasesBase/bin/
+ClasesBase/obj/
+Vistas/bin/
+Vistas/obj/
 LPOO2_GRUPO06.sln
 LPOO2_GRUPO06.suo
