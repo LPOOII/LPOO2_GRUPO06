@@ -1,4 +1,3 @@
-# git ignore file
 ClasesBase/app
 ClasesBase/bin
 ClasesBase/obj
@@ -9,8 +8,5 @@ Vistas/obj
 /ClasesBase/obj
 /Vistas/bin
 /Vistas/obj
-ClasesBase/obj/Debug/
-Vistas/bin/Debug/
-Vistas/obj/x86/
 LPOO2_GRUPO06.sln
 LPOO2_GRUPO06.suo
