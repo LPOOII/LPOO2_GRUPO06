@@ -12,3 +12,5 @@ C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.Properties.Re
 C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.exe
 C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Emanuel Alejandro\Downloads\lpoo ll\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Emanuel Alejandro\Downloads\lpoo ll\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.pdb

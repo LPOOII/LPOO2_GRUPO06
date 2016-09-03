@@ -1,0 +1,14 @@
+# git ignore file
+ClasesBase/app
+ClasesBase/bin
+ClasesBase/obj
+Vistas/bin
+Vistas/obj
+/ClasesBase/app
+/ClasesBase/bin
+/ClasesBase/obj
+/Vistas/bin
+/Vistas/obj
+ClasesBase/obj/Debug/
+Vistas/bin/Debug/
+Vistas/obj/x86/
