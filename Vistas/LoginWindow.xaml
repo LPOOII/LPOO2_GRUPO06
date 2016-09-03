@@ -14,6 +14,9 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="143,64,0,0" Name="txtUser" VerticalAlignment="Top" Width="120" />
         <Label Content="Contraseña" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="35,114,0,0" Name="label2" VerticalAlignment="Top"  Foreground="White"/>        
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="143,115,0,0" Name="txtPassword" VerticalAlignment="Top" Width="120" />
+        <!--BTN VENTANA-->
+        <Button Content="Ingresar" Height="23" HorizontalAlignment="Left" Margin="61,181,0,0" Name="btnLogin" VerticalAlignment="Top" Width="80" Click="btnLogin_Click" />
+        <Button Content="Cerrar" Height="23" HorizontalAlignment="Left" Margin="166,181,0,0" Name="btnCerrar" VerticalAlignment="Top" Width="80" Click="btnCerrar_Click" />
         <!--BOTONERA PASSWORD-->
         <Button Content="1" Height="40" HorizontalAlignment="Left" Margin="317,24,0,0" Name="button1" VerticalAlignment="Top" Width="40" Click="mostrar"/>
         <Button Content="2" Height="40" HorizontalAlignment="Left" Margin="390,24,0,0" Name="button2" VerticalAlignment="Top" Width="40" Click="mostrar"/>
@@ -26,9 +29,6 @@
         <Button Content="9" Height="40" HorizontalAlignment="Left" Margin="460,142,0,0" Name="button9" VerticalAlignment="Top" Width="40" Click="mostrar"/>
         <Button Content="*" Height="40" HorizontalAlignment="Left" Margin="317,201,0,0" Name="button10" VerticalAlignment="Top" Width="40" Click="mostrar"/>
         <Button Content="0" Height="40" HorizontalAlignment="Left" Margin="390,201,0,0" Name="button11" VerticalAlignment="Top" Width="40" Click="mostrar"/>
-        <Button Content="#" Height="40" HorizontalAlignment="Left" Margin="460,201,0,0" Name="button12" VerticalAlignment="Top" Width="40" Click="mostrar"/>
-        <!--BTN VENTANA-->
-        <Button Content="Ingresar" Height="23" HorizontalAlignment="Left" Margin="61,181,0,0" Name="btnLogin" VerticalAlignment="Top" Width="80" Click="btnLogin_Click" />
-        <Button Content="Cerrar" Height="23" HorizontalAlignment="Left" Margin="166,181,0,0" Name="btnCerrar" VerticalAlignment="Top" Width="80" Click="btnCerrar_Click" />
+        <Button Content="#" Height="40" HorizontalAlignment="Left" Margin="460,201,0,0" Name="button12" VerticalAlignment="Top" Width="40" Click="mostrar"/>        
     </Grid>
 </Window>

@@ -22,5 +22,22 @@ namespace Vistas
         {
             InitializeComponent();
         }
+
+        /**
+         * @Author Paulo
+         * boton en el menu encargado de cerrar la aplicacion
+         */
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Close Application?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+            {
+                //this.Close();
+            }
+            else
+            {
+                this.Close();
+            }
+            
+        }
     }
 }
