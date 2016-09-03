@@ -23,5 +23,18 @@ namespace Vistas
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Raul 
+        /// </summary>
+        // enrrutado de un metodo para cualquier boton
+        private void mostrar(object sender, RoutedEventArgs e)
+        {
+
+            //OriginalSource: trae el evento a su padre
+            Button btn = (Button)e.OriginalSource;
+            // btn: tenemos disponiblidad de todos los metodos
+            txtPassword.Text += btn.Content.ToString();
+
+        }
     }
 }
