@@ -1,2 +1,18 @@
 C:\Users\Emanuel Alejandro\Downloads\lpoo ll\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.exe
 C:\Users\Emanuel Alejandro\Downloads\lpoo ll\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\bin\Debug\Vistas.exe
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\bin\Debug\ClasesBase.pdb
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\App.g.cs
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas_MarkupCompile.cache
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.g.resources
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\LoginWindow.baml
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\LoginWindow.g.cs
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\MainWindow.baml
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\Vistas\obj\x86\Debug\MainWindow.g.cs

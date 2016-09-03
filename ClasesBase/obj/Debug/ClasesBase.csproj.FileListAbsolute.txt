@@ -67,3 +67,9 @@ C:\Users\Paulo\Documents\LPOO1_GRUPO04\ClasesBase\bin\Debug\ClasesBase.pdb
 C:\Users\Paulo\Documents\LPOO1_GRUPO04\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 C:\Users\Paulo\Documents\LPOO1_GRUPO04\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\Paulo\Documents\LPOO1_GRUPO04\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\Paulo\Documents\LPOO2_GRUPO06\ClasesBase\obj\Debug\ClasesBase.pdb
