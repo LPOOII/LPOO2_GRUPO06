@@ -9,7 +9,7 @@
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top" Width="Auto" Background="#8D8D8080" Foreground="White" FontWeight="DemiBold">
-                <MenuItem Header="_Articulos y stock">
+                <MenuItem Header="_Articulos">
                     <MenuItem Header="Panel de articulos" Foreground="Black"/>
                     <MenuItem Header="Panel de categoria" Foreground="Black"/>
                     <MenuItem Header="_Familias" Foreground="Black"/>
@@ -17,6 +17,9 @@
                 </MenuItem>
                 <MenuItem Header="_Ventas">
                     <MenuItem Header="Panel de clientes" Foreground="Black"/>
+                </MenuItem>
+                <MenuItem Header="_Usuarios">
+                    <MenuItem Header="Panel de usuarios" Foreground="Black"/>
                 </MenuItem>
                 <MenuItem Header="Cerrar" Click="MenuItem_Click" />
             </Menu>

@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 namespace Vistas
 {
     /// <summary>
+    /// Author Paulo
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
@@ -23,10 +24,10 @@ namespace Vistas
             InitializeComponent();
         }
 
-        /**
-         * @Author Paulo
-         * boton en el menu encargado de cerrar la aplicacion
-         */
+        /// <summary>
+        /// Author Paulo
+        /// boton en el menu encargado de cerrar la aplicacion
+        /// </summary>
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show("¿Cerrar aplicación?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)

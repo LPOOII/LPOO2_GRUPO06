@@ -16,10 +16,11 @@ using ClasesBase;
 
 namespace Vistas
 {
-    /**
-     * @Author Paulo
-     * Lógica de interacción para MainWindow.xaml
-     **/
+    
+    /// <summary> 
+    /// Lógica de interacción para MainWindow.xaml
+    /// Author Paulo
+    /// </summary>
     public partial class LoginWindow : Window
     {
         bool isLogged = false;
@@ -29,10 +30,10 @@ namespace Vistas
             InitializeComponent();
         }
 
-        /**
-         * @Author Raul
-         * @Sumary enrrutado de un metodo para cualquier boton
-         **/
+        /// <summary>
+        /// Author Raul
+        /// Sumary enrrutado de un metodo para cualquier boton
+        /// </summary>
         private void mostrar(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)e.OriginalSource;
@@ -41,19 +42,19 @@ namespace Vistas
 
         }
 
-        /**
-         * @Author Paulo
-         * metodo encargado de cerrar la ventana
-         **/
+         /// <summary>
+         /// Author Paulo
+         /// metodo encargado de cerrar la ventana
+         /// </summary>
         private void btnCerrar_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        /**
-         * @Author Paulo
-         * metodo encargado del login de usuario
-         */
+         /// <summary>
+         /// Author Paulo
+         /// metodo encargado del login de usuario
+         /// </summary>
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             Usuario usuario = UsuarioModel.login(txtUser.Text.ToLower(), txtPassword.Password);
@@ -67,10 +68,10 @@ namespace Vistas
             }
         }
 
-        /**
-         * @Author Paulo
-         * metodo encargado de abrir ventana de aplicacion luego del login exitoso
-         */
+         /// <summary>
+         /// Author Paulo
+         /// metodo encargado de abrir ventana de aplicacion luego del login exitoso
+         /// </summary>
         private void windows_closed(object sender, CancelEventArgs e) 
         {
             if (isLogged)
