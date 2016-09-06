@@ -29,5 +29,11 @@ namespace ClasesBase
             this.fam_Descrip = fam_Descrip;
         }
 
+        public override string ToString()
+        {
+            return "Familia: " + Fam_Id + "\n" +
+                "Descripcion: " + fam_Descrip;
+        }
+
     }
 }

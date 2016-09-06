@@ -41,5 +41,12 @@ namespace ClasesBase
 
         }
 
+        public override string ToString()
+        {
+            return "Unidad de medida: " + Um_Id + "\n" +
+                "Descripcion: " + Um_Descrip + "\n" +
+                "Abreviatura: " + Um_Abrev;
+        }
+
     }
 }

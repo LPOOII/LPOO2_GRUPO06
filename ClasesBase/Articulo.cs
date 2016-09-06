@@ -127,5 +127,13 @@ namespace ClasesBase
             this.Art_Stock_Max = art_Stock_Max;
         }
 
+        public override string ToString()
+        {
+            return "Articulo: " + Art_Id + "\n" +
+                "Familia: "+ Fam_Id + "\n" +
+                "Descripcion: "+ Art_Descrip +  "\n" +
+                "Costo: " + Art_Costo;
+        }
+
     }
 }

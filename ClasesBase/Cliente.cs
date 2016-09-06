@@ -84,5 +84,17 @@ namespace ClasesBase
             this.cli_Fecha_Nac = cli_Fecha_Nac;
 
         }
+
+        public override string ToString()
+        {
+            return "Nombre y apellido: " + Cli_Nombre + "\n" +
+                "Domicilio: " + Cli_Domicilio + "\n" +
+                "Departamento: " + Cli_Departamento + "\n" +
+                "Codigo postal: " + Cli_Codigo_Postal + "\n" +
+                "Telefono: " + Cli_Telefono + "\n" +
+                "Email: " + Cli_Email + "\n" +
+                "Fecha de nacimiento: " + Cli_Fecha_Nac.ToString();
+
+        }
     }
 }

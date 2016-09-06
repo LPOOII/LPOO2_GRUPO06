@@ -28,5 +28,11 @@ namespace ClasesBase
             this.cat_id = cat_id;
         }
 
+        public override string ToString()
+        {
+            return "Categoria: " + Cat_id + "\n" +
+                "Descripcion: " + Cat_descrip;
+        }
+
     }
 }

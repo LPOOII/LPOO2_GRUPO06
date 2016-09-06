@@ -70,6 +70,12 @@ namespace ClasesBase
             this.usr_Email = usr_Email;
 
         }
+        public Usuario(string usr_UserName, string usr_Password, int rol_Id)
+        {
+            this.usr_UserName = usr_UserName;
+            this.usr_Password = usr_Password;
+            this.rol_Id = rol_Id;
+        }
        
     }
 
