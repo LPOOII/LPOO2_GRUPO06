@@ -11,7 +11,7 @@
     <ContentControl>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="260" Width="525">
         <!--LABELS Y TEXTBOXS-->
-        <Label Content="Usuario" FontWeight="Black" Height="28" HorizontalAlignment="Left" Margin="43,60,0,0" Name="label1" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Usuario" FontWeight="Black" Height="28" HorizontalAlignment="Left" Margin="35,59,0,0" Name="label1" VerticalAlignment="Top" Foreground="White"/>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="143,64,0,0" Name="txtUser" VerticalAlignment="Top" Width="120" />
         <Label Content="Contraseña" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="35,114,0,0" Name="label2" VerticalAlignment="Top"  Foreground="White"/>        
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="143,115,0,0" Name="txtPassword" VerticalAlignment="Top" Width="120" />
