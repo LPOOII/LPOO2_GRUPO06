@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Vistas;
 
 namespace Vistas
 {
@@ -44,6 +45,13 @@ namespace Vistas
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
 
+        }
+
+
+        private void abrirVentaMesa(object sender, RoutedEventArgs e)
+        {
+            VentaMesas ventaMesas = new VentaMesas();
+            ventaMesas.ShowDialog();
         }
     }
 }

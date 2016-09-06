@@ -17,7 +17,7 @@
                 </MenuItem>
                 <MenuItem Header="_Ventas" Click="MenuItem_Click_1">
                     <MenuItem Header="Panel de clientes" Foreground="Black"/>
-                    <MenuItem Header="Mesas" Foreground="Black"/>
+                    <MenuItem Header="Mesas" Foreground="Black" Click="abrirVentaMesa"/>
                 </MenuItem>
                 <MenuItem Header="_Usuarios">
                     <MenuItem Header="Panel de usuarios" Foreground="Black"/>
