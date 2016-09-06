@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Vistas.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="800" Width="800" Foreground="White"
+        Title="MainWindow" Height="500" Width="800" Foreground="White"
         WindowStyle="SingleBorderWindow">
     <Window.Background>
         <ImageBrush ImageSource="src/bg.jpg"/>
@@ -10,14 +10,14 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top" Width="Auto" Background="#8D8D8080" Foreground="White" FontWeight="DemiBold">
                 <MenuItem Header="_Articulos">
-                    <MenuItem Header="Panel de articulos" Foreground="Black"/>
-                    <MenuItem Header="Panel de categoria" Foreground="Black"/>
-                    <MenuItem Header="_Familias" Foreground="Black"/>
-                    <MenuItem Header="_Unidades de medida" Foreground="Black"/>
+                    <MenuItem Header="Panel de articulos" Foreground="Black" Click="Panel_articulos"/>
+                    <MenuItem Header="Panel de categoria" Foreground="Black" Click="Panel_categorias"/>
+                    <MenuItem Header="_Familias" Foreground="Black" Click="Familias"/>
+                    <MenuItem Header="_Unidades de medida" Foreground="Black" Click="Unidades_medida"/>
                 </MenuItem>
-                <MenuItem Header="_Ventas" Click="MenuItem_Click_1">
-                    <MenuItem Header="Panel de clientes" Foreground="Black"/>
-                    <MenuItem Header="Mesas" Foreground="Black" Click="abrirVentaMesa"/>
+                <MenuItem Header="_Ventas">
+                    <MenuItem Header="Panel de clientes" Foreground="Black" Click="Panel_clientes"/>
+                    <MenuItem Header="Mesas" Foreground="Black" Click="Mesas"/>
                 </MenuItem>
                 <MenuItem Header="_Usuarios">
                     <MenuItem Header="Panel de usuarios" Foreground="Black"/>

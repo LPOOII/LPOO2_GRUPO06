@@ -10,7 +10,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Vistas;
 
 namespace Vistas
 {
@@ -31,27 +30,48 @@ namespace Vistas
         /// </summary>
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("¿Cerrar aplicación?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
-            {
-                //this.Close();
-            }
-            else
+            if (MessageBox.Show("¿Cerrar aplicación?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 this.Close();
             }
             
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void Panel_articulos(object sender, RoutedEventArgs e)
         {
-
+            Panel_articulos articulos = new Panel_articulos();
+            articulos.Show();
         }
 
-
-        private void abrirVentaMesa(object sender, RoutedEventArgs e)
+        private void Panel_categorias(object sender, RoutedEventArgs e)
         {
-            VentaMesas ventaMesas = new VentaMesas();
-            ventaMesas.ShowDialog();
+            Panel_categorias categorias = new Panel_categorias();
+            categorias.Show();
         }
+
+        private void Familias(object sender, RoutedEventArgs e)
+        {
+            Familias familias = new Familias();
+            familias.Show();
+        }
+
+        private void Unidades_medida(object sender, RoutedEventArgs e)
+        {
+            Unidades_medida unidades = new Unidades_medida();
+            unidades.Show();
+        }
+
+        private void Panel_clientes(object sender, RoutedEventArgs e)
+        {
+            Panel_cliente clientes = new Panel_cliente();
+            clientes.Show();
+        }
+
+        private void Mesas(object sender, RoutedEventArgs e)
+        {
+            VentaMesas mesas = new VentaMesas();
+            mesas.Show();
+        }
+
     }
 }
