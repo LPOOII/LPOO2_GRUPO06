@@ -21,5 +21,12 @@ namespace ClasesBase
             get { return cat_descrip; }
             set { cat_descrip = value; }
         }
+
+        public Categoria(int cat_id, String cat_descrip)
+        {
+            this.cat_descrip = cat_descrip;
+            this.cat_id = cat_id;
+        }
+
     }
 }

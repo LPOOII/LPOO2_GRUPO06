@@ -53,6 +53,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,9 +72,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="VentaMesas.xaml.cs">
-      <DependentUpon>VentaMesas.xaml</DependentUpon>
+    <Compile Include="Panel_cliente.xaml.cs">
+      <DependentUpon>Panel_cliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Unidades_medida.xaml.cs">
+      <DependentUpon>Unidades_medida.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Familias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,6 +89,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Familias.xaml.cs">
+      <DependentUpon>Familias.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -89,7 +101,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VentaMesas.xaml">
+    <Page Include="Mesas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panel_articulos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panel_categorias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Panel_cliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Unidades_medida.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,6 +125,15 @@
   <ItemGroup>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mesas.xaml.cs">
+      <DependentUpon>Mesas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panel_articulos.xaml.cs">
+      <DependentUpon>Panel_articulos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panel_categorias.xaml.cs">
+      <DependentUpon>Panel_categorias.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -152,7 +189,9 @@
       <Name>ClasesBase</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="src\bg.jpg" />
   </ItemGroup>

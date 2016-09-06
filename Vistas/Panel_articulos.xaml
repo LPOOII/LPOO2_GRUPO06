@@ -1,0 +1,55 @@
+﻿<Window x:Class="Vistas.Panel_articulos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="SingleBorderWindow" Foreground="White"
+        ResizeMode="NoResize"
+        Title="Panel articulos" Height="450" Width="700">
+    <Window.Background>
+        <ImageBrush ImageSource="src/bg.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Label Content="Familia" Foreground="White" FontWeight="DemiBold" Height="28" HorizontalAlignment="Left" Margin="29,59,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Unidad de medida" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="29,94,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="Costo" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="29,122,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Precio" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="29,223,0,0" Name="label5" VerticalAlignment="Top" />
+        <Label Content="Stock minimo" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="26,155,0,0" Name="label6" VerticalAlignment="Top" />
+        <Label Content="Stock reposicion" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="26,257,0,0" Name="label7" VerticalAlignment="Top" />
+        <Label Content="Stock actual" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="29,293,0,0" Name="label8" VerticalAlignment="Top" />
+        <Label Content="Maneja stock" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="29,327,0,0" Name="label9" VerticalAlignment="Top" />
+        <Label Content="Descripcion" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="29,24,0,0" Name="label10" VerticalAlignment="Top" />
+        <Label Content="Stock maximo" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="29,189,0,0" Name="label11" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,28,0,0" Name="descripcion" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,127,0,0" Name="costo" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,159,0,0" Name="minimo" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,193,0,0" Name="maximo" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,227,0,0" Name="precio" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,261,0,0" Name="reposicion" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,297,0,0" Name="actual" VerticalAlignment="Top" Width="120" />
+        <RadioButton Content="Si" Foreground="White" FontWeight="DemiBold" Height="16" HorizontalAlignment="Left" Margin="177,333,0,0" Name="radioSi" VerticalAlignment="Top" />
+        <RadioButton Content="No" FontWeight="DemiBold" Foreground="White" Height="16" HorizontalAlignment="Left" Margin="228,333,0,0" Name="radioNo" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,61,0,0" Name="stockSi" Loaded="load_familia" VerticalAlignment="Top" Width="120" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,94,0,0" Name="stockNo" Loaded="load_unidades" VerticalAlignment="Top" Width="120" />
+        <Button Content="Guardar" Height="23" HorizontalAlignment="Left" Margin="123,374,0,0" Name="guardarBtn" VerticalAlignment="Top" Width="75" Click="guardarBtn_Click" />
+        <DataGrid AutoGenerateColumns="False"
+                  CanUserAddRows="True"
+                  Loaded="lista_articulos"
+                  ItemsSource="{Binding}"
+                  Height="200" HorizontalAlignment="Left"
+                  Margin="352,84,0,0" Name="dataGridArticulos"
+                  VerticalAlignment="Top" Width="298">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Descripcion" Binding="{Binding Art_Descrip}"/>
+                <DataGridTextColumn Header="Familia" Binding="{Binding Fam_Id}"/>
+                <DataGridTextColumn Header="Unidad medida" Binding="{Binding Um_Id}"/>
+                <DataGridTextColumn Header="Costo" Binding="{Binding Art_Costo}"/>
+                <DataGridTextColumn Header="S. Min" Binding="{Binding Art_Stock_Min}"/>
+                <DataGridTextColumn Header="S. Max." Binding="{Binding Art_Stock_Max}"/>
+                <DataGridTextColumn Header="Precio" Binding="{Binding Art_Precio}"/>
+                <DataGridTextColumn Header="S. Resposicion" Binding="{Binding Art_Stock_Reposicion}"/>
+                <DataGridTextColumn Header="S. Actual" Binding="{Binding Art_Stock_Actual}"/>
+                <DataGridTextColumn Header="Maneja stock" Binding="{Binding Art_Maneja_Stock}"/>
+                <DataGridTextColumn Header="M. Beneficio" Binding="{Binding Art_Margen_Beneficio}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
