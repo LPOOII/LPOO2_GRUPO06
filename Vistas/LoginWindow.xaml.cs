@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
 using ClasesBase;
 
 namespace Vistas
@@ -24,10 +25,15 @@ namespace Vistas
     public partial class LoginWindow : Window
     {
         bool isLogged = false;
+        public static Usuario usuarioLogeado;
+        private ArrayList usuarios = new ArrayList();
 
         public LoginWindow()
         {
             InitializeComponent();
+            usuarios.Add(new Usuario("1111", "1111", 1));
+            usuarios.Add(new Usuario("2222", "2222", 2));
+            usuarios.Add(new Usuario("3333", "3333", 3));
         }
 
         /// <summary>
@@ -57,17 +63,26 @@ namespace Vistas
          /// </summary>
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            //Usuario usuario = UsuarioModel.login(txtUser.Text.ToLower(), txtPassword.Password);
-            string usuario = "1111";
-            string password = "1111";
-            if (usuario == txtUser.Text && password == txtPassword.Password)
+            login();
+        }
+
+        private void login() 
+        {
+            foreach(Usuario usuario in usuarios)
             {
-                this.isLogged = true;
-                this.Close();
+                if(usuario.Usr_UserName == txtUser.Text && usuario.Usr_Password == txtPassword.Password)
+                {
+                    this.isLogged = true;
+                    usuarioLogeado = usuario;
+                    this.Close();
+                    break;
+                }                
             }
-            else {
+            if (!isLogged)
+            {
                 MessageBox.Show("Password y/o usuario incorrecto");
             }
+            
         }
 
          /// <summary>
@@ -81,6 +96,14 @@ namespace Vistas
                 MainWindow main = new MainWindow();
                 main.Show();
             }
+        }
+
+        private void Enter(object sender, KeyEventArgs e) 
+        { 
+         if(e.Key == Key.Enter)
+         {
+             login();
+         }
         }
     }
 }

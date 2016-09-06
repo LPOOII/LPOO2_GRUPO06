@@ -34,6 +34,7 @@ namespace Vistas
             Categoria categoria = new Categoria(1, descripcion.Text);
             descripcion.Text = "";
             dataGridCategoria.Items.Add(categoria);
+            MessageBox.Show(categoria.ToString());
         }
     }
 }

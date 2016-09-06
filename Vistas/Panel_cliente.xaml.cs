@@ -43,6 +43,7 @@ namespace Vistas
             codigoPostal.Text = "";
             telefono.Text = "";
             fechaNacimiento.SelectedDate = null;
+            MessageBox.Show(cliente.ToString());
         }
     }
 }

@@ -95,6 +95,7 @@ namespace Vistas
             articulo.Art_Maneja_Stock = true;
             articulo.Art_Margen_Beneficio = 10;
             dataGridArticulos.Items.Add(articulo);
+            MessageBox.Show(articulo.ToString());
         }
 
     }

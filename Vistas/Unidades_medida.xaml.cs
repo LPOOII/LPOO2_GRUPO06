@@ -35,6 +35,7 @@ namespace Vistas
             descripcion.Text = "";
             abreviatura.Text = "";
             dataGridUnidadM.Items.Add(um);
+            MessageBox.Show(um.ToString());
         }
     }
 }

@@ -34,6 +34,7 @@ namespace Vistas
             Familia familia = new Familia(1 , descripcion.Text);
             descripcion.Text = "";
             dataGridFamilias.Items.Add(familia);
+            MessageBox.Show(familia.ToString());
         }
     }
 }

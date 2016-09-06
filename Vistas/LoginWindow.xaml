@@ -14,7 +14,11 @@
         <Label Content="Usuario" FontWeight="Black" Height="28" HorizontalAlignment="Left" Margin="35,59,0,0" Name="label1" VerticalAlignment="Top" Foreground="White"/>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="143,64,0,0" Name="txtUser" VerticalAlignment="Top" Width="120" />
         <Label Content="Contraseña" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="35,114,0,0" Name="label2" VerticalAlignment="Top"  Foreground="White"/>        
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="143,115,0,0" Name="txtPassword" VerticalAlignment="Top" Width="120" />
+        <PasswordBox Height="23"
+                     HorizontalAlignment="Left"
+                     KeyDown="Enter"
+                     Margin="143,115,0,0" Name="txtPassword" 
+                     VerticalAlignment="Top" Width="120" />
         <!--BTN VENTANA-->
         <Button Content="Ingresar" Height="23" HorizontalAlignment="Left" Margin="61,181,0,0" Name="btnLogin" VerticalAlignment="Top" Width="80" Click="btnLogin_Click" />
         <Button Content="Cerrar" Height="23" HorizontalAlignment="Left" Margin="166,181,0,0" Name="btnCerrar" VerticalAlignment="Top" Width="80" Click="btnCerrar_Click" />
