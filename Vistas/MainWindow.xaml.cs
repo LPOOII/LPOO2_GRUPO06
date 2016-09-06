@@ -40,5 +40,10 @@ namespace Vistas
             }
             
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

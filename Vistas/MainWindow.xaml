@@ -15,8 +15,9 @@
                     <MenuItem Header="_Familias" Foreground="Black"/>
                     <MenuItem Header="_Unidades de medida" Foreground="Black"/>
                 </MenuItem>
-                <MenuItem Header="_Ventas">
+                <MenuItem Header="_Ventas" Click="MenuItem_Click_1">
                     <MenuItem Header="Panel de clientes" Foreground="Black"/>
+                    <MenuItem Header="Mesas" Foreground="Black"/>
                 </MenuItem>
                 <MenuItem Header="_Usuarios">
                     <MenuItem Header="Panel de usuarios" Foreground="Black"/>
