@@ -72,12 +72,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ControlUsuario\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Panel_cliente.xaml.cs">
       <DependentUpon>Panel_cliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="Unidades_medida.xaml.cs">
       <DependentUpon>Unidades_medida.xaml</DependentUpon>
     </Compile>
+    <Page Include="ControlUsuario\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Familias.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
