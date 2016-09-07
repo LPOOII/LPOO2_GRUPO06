@@ -31,9 +31,9 @@ namespace Vistas
         public LoginWindow()
         {
             InitializeComponent();
-            usuarios.Add(new Usuario("1111", "1111", 1));
-            usuarios.Add(new Usuario("2222", "2222", 2));
-            usuarios.Add(new Usuario("3333", "3333", 3));
+            usuarios.Add(new Usuario("admin", "1111", 1));
+            usuarios.Add(new Usuario("mozo", "2222", 2));
+            usuarios.Add(new Usuario("cajero", "3333", 3));
         }
 
         /// <summary>
