@@ -34,6 +34,10 @@ namespace Vistas
             usuarios.Add(new Usuario("admin", "1111", 1));
             usuarios.Add(new Usuario("mozo", "2222", 2));
             usuarios.Add(new Usuario("cajero", "3333", 3));
+            usuarios.Add(new Usuario("repositor", "4444", 4));
+            usuarios.Add(new Usuario("pastelero", "5555", 5));
+            usuarios.Add(new Usuario("comprador", "6666", 6));
+            usuarios.Add(new Usuario("vendedor", "7777", 7));
         }
 
         /// <summary>
