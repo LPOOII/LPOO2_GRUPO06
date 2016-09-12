@@ -72,20 +72,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ControlUsuario\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Panel_cliente.xaml.cs">
+    <Compile Include="Ventas\Panel_cliente.xaml.cs">
       <DependentUpon>Panel_cliente.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Unidades_medida.xaml.cs">
+    <Compile Include="Articulos\Unidades_medida.xaml.cs">
       <DependentUpon>Unidades_medida.xaml</DependentUpon>
     </Compile>
-    <Page Include="ControlUsuario\Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Familias.xaml">
+    <Page Include="Articulos\Familias.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,7 +90,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Familias.xaml.cs">
+    <Compile Include="Articulos\Familias.xaml.cs">
       <DependentUpon>Familias.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.xaml.cs">
@@ -108,23 +101,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Mesas.xaml">
+    <Page Include="Ventas\Mesas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Panel_articulos.xaml">
+    <Page Include="Articulos\Panel_articulos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Panel_categorias.xaml">
+    <Page Include="Articulos\Panel_categorias.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Panel_cliente.xaml">
+    <Page Include="Ventas\Panel_cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Unidades_medida.xaml">
+    <Page Include="Articulos\Unidades_medida.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,13 +126,13 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Mesas.xaml.cs">
+    <Compile Include="Ventas\Mesas.xaml.cs">
       <DependentUpon>Mesas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Panel_articulos.xaml.cs">
+    <Compile Include="Articulos\Panel_articulos.xaml.cs">
       <DependentUpon>Panel_articulos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Panel_categorias.xaml.cs">
+    <Compile Include="Articulos\Panel_categorias.xaml.cs">
       <DependentUpon>Panel_categorias.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -197,10 +190,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <Folder Include="Usuarios\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\bg.jpg" />
+    <Resource Include="bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
