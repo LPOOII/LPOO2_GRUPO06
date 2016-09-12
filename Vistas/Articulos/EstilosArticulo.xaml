@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTemplate x:Key="btn_desencadenador" TargetType="{x:Type Button}">
+        <Border x:Name="btn_border" BorderBrush="Black" BorderThickness="2"
+                CornerRadius="5" Background="Aqua">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ContentPresenter Grid.Row="1" HorizontalAlignment="Center"
+                                  VerticalAlignment="Center">                    
+                </ContentPresenter>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontWeight" Value="Demibold"></Setter>
+                <Setter Property="Background" Value="White" TargetName="btn_border"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    
+    <Style TargetType="Button" x:Key="btn_mouse_over">
+        <Setter Property="Template" Value="{StaticResource ResourceKey=btn_desencadenador}"></Setter>
+    </Style>
+</ResourceDictionary>
