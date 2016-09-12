@@ -6,7 +6,7 @@
         Closing="windows_closed" 
         ResizeMode="NoResize">
         <Window.Background>
-            <ImageBrush ImageSource="src/bg.jpg"/>
+            <ImageBrush ImageSource="bg.jpg"/>
         </Window.Background>
     <ContentControl>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="260" Width="525">

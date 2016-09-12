@@ -4,7 +4,7 @@
         Title="MainWindow" Height="500" Width="800" Foreground="White"
         WindowStyle="SingleBorderWindow">
     <Window.Background>
-        <ImageBrush ImageSource="src/bg.jpg"/>
+        <ImageBrush ImageSource="bg.jpg"/>
     </Window.Background>
     <Grid>
         <DockPanel>
