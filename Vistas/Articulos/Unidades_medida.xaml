@@ -1,0 +1,26 @@
+﻿<Window x:Class="Vistas.Unidades_medida"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         WindowStyle="SingleBorderWindow" Foreground="White"
+        ResizeMode="NoResize"
+        Title="Unidades_medida" Height="350" Width="460">
+    <Window.Background>
+        <ImageBrush ImageSource="../bg.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Label Content="Descripcion" Foreground="White" FontWeight="DemiBold" Height="28" HorizontalAlignment="Left" Margin="47,32,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Abreviatura" Foreground="White" FontWeight="DemiBold" Height="28" HorizontalAlignment="Left" Margin="47,66,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="157,36,0,0" Name="descripcion" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="157,70,0,0" Name="abreviatura" VerticalAlignment="Top" Width="120" />
+        <Button Content="Guardar" Height="23" HorizontalAlignment="Left" Margin="322,52,0,0" Name="btnGuardar" VerticalAlignment="Top" Width="75" Click="btnGuardar_Click" />
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding}"
+                  Height="126" HorizontalAlignment="Left"
+                  Margin="109,120,0,0" Name="dataGridUnidadM"
+                  VerticalAlignment="Top" Width="214">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Descripcion" Binding="{Binding Um_Descrip}"/>
+                <DataGridTextColumn Header="Abreviatura" Binding="{Binding Um_Abrev}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
