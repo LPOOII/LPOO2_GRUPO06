@@ -22,7 +22,11 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="157,156,0,0" Name="telefono" VerticalAlignment="Top" Width="120" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="157,192,0,0" Name="email" VerticalAlignment="Top" Width="120" />
         <DatePicker Height="25" HorizontalAlignment="Left" Margin="157,226,0,0" Name="fechaNacimiento" VerticalAlignment="Top" Width="115" />
-        <Button Content="Guardar" Height="23" HorizontalAlignment="Left" Margin="110,272,0,0" Name="btnGuardar" VerticalAlignment="Top" Width="75" Click="btnGuardar_Click" />
+        <Button Content="Guardar"
+                Height="23" HorizontalAlignment="Left" 
+                Margin="110,272,0,0" Name="btnGuardar"
+                Style="{StaticResource ResourceKey=btn_cliente}"
+                VerticalAlignment="Top" Width="75" Click="btnGuardar_Click" />
         <DataGrid AutoGenerateColumns="False" Height="161" ItemsSource="{Binding}"
                   HorizontalAlignment="Left" Margin="330,35,0,0"
                   Name="dataGridClientes" VerticalAlignment="Top" Width="316">
