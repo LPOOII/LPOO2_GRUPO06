@@ -72,12 +72,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Login\FormLogin.xaml.cs">
+      <DependentUpon>FormLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Panel_cliente.xaml.cs">
       <DependentUpon>Panel_cliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="Articulos\Unidades_medida.xaml.cs">
       <DependentUpon>Unidades_medida.xaml</DependentUpon>
     </Compile>
+    <Page Include="Login\FormLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventas\EstilosCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Articulos\Familias.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,11 +97,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EstilosLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="LoginWindow.xaml">
+    <Page Include="Login\LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -101,7 +108,7 @@
     <Compile Include="Articulos\Familias.xaml.cs">
       <DependentUpon>Familias.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LoginWindow.xaml.cs">
+    <Compile Include="Login\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
