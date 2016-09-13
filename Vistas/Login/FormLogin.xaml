@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Vistas.Login.FormLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="124" d:DesignWidth="312">
+    <Grid Height="121">
+        <Label Content="Usuario" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="50,16,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="158,21,0,0" Name="txtUser" VerticalAlignment="Top" Width="120" />
+        <Label Content="Contraseña" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="50,71,0,0" Name="label2" VerticalAlignment="Top" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="158,72,0,0" Name="txtPassword" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</UserControl>
