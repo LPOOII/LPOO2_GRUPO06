@@ -8,30 +8,30 @@
         <ImageBrush ImageSource="../bg.jpg"/>
     </Window.Background>
     <Grid>
-            <Label Content="Familia" Height="28" HorizontalAlignment="Left" Margin="29,59,0,0" Name="label1" VerticalAlignment="Top" />
-            <Label Content="Unidad de medida" Height="28" HorizontalAlignment="Left" Margin="29,94,0,0" Name="label2" VerticalAlignment="Top" />
-            <Label Content="Costo"  Height="28" HorizontalAlignment="Left" Margin="29,122,0,0" Name="label3" VerticalAlignment="Top" />
-            <Label Content="Precio" Height="28" HorizontalAlignment="Left" Margin="29,223,0,0" Name="label5" VerticalAlignment="Top" />
-            <Label Content="Stock minimo" Height="28" HorizontalAlignment="Left" Margin="26,155,0,0" Name="label6" VerticalAlignment="Top" />
-            <Label Content="Stock reposicion" Height="28" HorizontalAlignment="Left" Margin="26,257,0,0" Name="label7" VerticalAlignment="Top" />
-            <Label Content="Stock actual" Height="28" HorizontalAlignment="Left" Margin="29,293,0,0" Name="label8" VerticalAlignment="Top" />
-            <Label Content="Maneja stock" Height="28" HorizontalAlignment="Left" Margin="29,327,0,0" Name="label9" VerticalAlignment="Top" />
-            <Label Content="Descripcion" Height="28" HorizontalAlignment="Left" Margin="29,24,0,0" Name="label10" VerticalAlignment="Top" />
-            <Label Content="Stock maximo" Height="28" HorizontalAlignment="Left" Margin="29,189,0,0" Name="label11" VerticalAlignment="Top" />               
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,28,0,0" Name="descripcion" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,127,0,0" Name="costo" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,159,0,0" Name="minimo" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,193,0,0" Name="maximo" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,227,0,0" Name="precio" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,261,0,0" Name="reposicion" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="164,297,0,0" Name="actual" VerticalAlignment="Top" Width="120" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Familia" Height="28" HorizontalAlignment="Left" Margin="29,59,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Unidad de medida" Height="28" HorizontalAlignment="Left" Margin="29,92,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Costo"  Height="28" HorizontalAlignment="Left" Margin="29,124,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Precio" Height="28" HorizontalAlignment="Left" Margin="29,224,0,0" Name="label5" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock minimo" Height="28" HorizontalAlignment="Left" Margin="29,156,0,0" Name="label6" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock reposicion" Height="28" HorizontalAlignment="Left" Margin="29,258,0,0" Name="label7" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock actual" Height="28" HorizontalAlignment="Left" Margin="29,294,0,0" Name="label8" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Maneja stock" Height="28" HorizontalAlignment="Left" Margin="29,327,0,0" Name="label9" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Descripcion" Height="28" HorizontalAlignment="Left" Margin="29,24,0,0" Name="label10" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock maximo" Height="28" HorizontalAlignment="Left" Margin="29,190,0,0" Name="label11" VerticalAlignment="Top" />
+        <TextBox Style="{StaticResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,28,0,0" Name="descripcion" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{StaticResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,127,0,0" Name="costo" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{StaticResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,159,0,0" Name="minimo" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{StaticResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,193,0,0" Name="maximo" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{StaticResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,227,0,0" Name="precio" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{StaticResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,261,0,0" Name="reposicion" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{StaticResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,297,0,0" Name="actual" VerticalAlignment="Top" Width="120" />
         <RadioButton Content="Si" Foreground="White" FontWeight="DemiBold" Height="16" HorizontalAlignment="Left" Margin="177,333,0,0" Name="radioSi" VerticalAlignment="Top" />
         <RadioButton Content="No" FontWeight="DemiBold" Foreground="White" Height="16" HorizontalAlignment="Left" Margin="228,333,0,0" Name="radioNo" VerticalAlignment="Top" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,61,0,0" Name="stockSi" Loaded="load_familia" VerticalAlignment="Top" Width="120" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,94,0,0" Name="stockNo" Loaded="load_unidades" VerticalAlignment="Top" Width="120" />
         <Button Style="{StaticResource ResourceKey=btn_mouse_over}"
                 Content="Guardar" Height="23" HorizontalAlignment="Left"
-                Margin="123,374,0,0" Name="guardarBtn" VerticalAlignment="Top"
+                Margin="123,363,0,0" Name="guardarBtn" VerticalAlignment="Top"
                 Width="75" Click="guardarBtn_Click" />
         <DataGrid AutoGenerateColumns="False"
                   CanUserAddRows="True"
