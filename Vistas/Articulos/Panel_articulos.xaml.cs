@@ -86,6 +86,7 @@ namespace Vistas
             articulo.Art_Descrip = descripcion.Text;
             articulo.Fam_Id = 1;
             articulo.Um_Id = 1;
+            
             articulo.Art_Costo = Convert.ToInt32(costo.Text);
             articulo.Art_Stock_Min = Convert.ToInt32(minimo.Text);
             articulo.Art_Stock_Max = Convert.ToInt32(maximo.Text);

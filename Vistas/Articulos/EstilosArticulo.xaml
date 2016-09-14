@@ -23,15 +23,6 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <ControlTemplate x:Key="txt_desencadenador" TargetType="{x:Type TextBox}">
-        <TextBox x:Name="txt_border"
-                 BorderThickness="2"
-                 VerticalAlignment="Bottom"
-                 BorderBrush="#2196f3"
-                 FontWeight="Regular"
-                 Foreground="Black">            
-        </TextBox>        
-    </ControlTemplate>
     <Style TargetType="Button" x:Key="btn_mouse_over">
         <Setter Property="Template" Value="{StaticResource ResourceKey=btn_desencadenador}"></Setter>
     </Style>
@@ -40,6 +31,10 @@
         <Setter Property="FontWeight" Value="Demibold"></Setter>
     </Style>
     <Style TargetType="TextBox" x:Key="txt_articulo">
-        <Setter Property="Template" Value="{StaticResource ResourceKey=txt_desencadenador}"></Setter>
+        <Setter Property="BorderThickness" Value="2"></Setter>
+        <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+        <Setter Property="BorderBrush" Value="#2196f3"></Setter>
+        <Setter Property="FontWeight" Value="Regular"></Setter>
+        <Setter Property="Foreground" Value="Black"></Setter>
     </Style>
 </ResourceDictionary>
