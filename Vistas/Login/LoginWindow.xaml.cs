@@ -24,20 +24,20 @@ namespace Vistas
     /// </summary>
     public partial class LoginWindow : Window
     {
-        bool isLogged = false;
-        public static Usuario usuarioLogeado;
-        private ArrayList usuarios = new ArrayList();
+        /// <summary>
+        /// variable que almacena datos de usuario logeado
+        /// </summary>
+        private static Usuario usuarioLogeado;
 
+        public static Usuario UsuarioLogeado
+        {
+            get { return LoginWindow.usuarioLogeado; }
+            set { LoginWindow.usuarioLogeado = value; }
+        }
         public LoginWindow()
         {
             InitializeComponent();
-            usuarios.Add(new Usuario("admin", "1111", 1));
-            usuarios.Add(new Usuario("mozo", "2222", 2));
-            usuarios.Add(new Usuario("cajero", "3333", 3));
-            usuarios.Add(new Usuario("repositor", "4444", 4));
-            usuarios.Add(new Usuario("pastelero", "5555", 5));
-            usuarios.Add(new Usuario("comprador", "6666", 6));
-            usuarios.Add(new Usuario("vendedor", "7777", 7));
+            
         }
 
         /// <summary>
@@ -61,53 +61,22 @@ namespace Vistas
             Application.Current.Shutdown();
         }
 
-         /// <summary>
-         /// Author Paulo
-         /// metodo encargado del login de usuario
-         /// </summary>
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            login();
-        }
 
-        private void login() 
-        {
-            foreach(Usuario usuario in usuarios)
-            {
-                if(usuario.Usr_UserName == formLogin.Username && usuario.Usr_Password == formLogin.Password)
-                {
-                    this.isLogged = true;
-                    usuarioLogeado = usuario;
-                    this.Close();
-                    break;
-                }               
-            }
-            if (!isLogged)
-            {
-                MessageBox.Show("Password y/o usuario incorrecto");
-            }
-            
-        }
 
-         /// <summary>
-         /// Author Paulo
-         /// metodo encargado de abrir ventana de aplicacion luego del login exitoso
-         /// </summary>
-        private void windows_closed(object sender, CancelEventArgs e) 
+        /// <summary>
+        /// Author Paulo
+        /// metodo encargado de abrir ventana de aplicacion luego del login exitoso
+        /// </summary>
+        private void windows_closed(object sender, CancelEventArgs e)
         {
-            if (isLogged)
-            {
+            if (formLogin.isLogeado)
+            {   // instacia al MainWindow
                 MainWindow main = new MainWindow();
+                //llama al formulario una vez logueado
                 main.Show();
             }
         }
 
-        private void Enter(object sender, KeyEventArgs e) 
-        { 
-         if(e.Key == Key.Enter)
-         {
-             login();
-         }
-        }
+        
     }
 }
