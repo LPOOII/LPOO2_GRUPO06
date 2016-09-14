@@ -22,7 +22,7 @@ namespace Vistas
         public MainWindow()
         {
             InitializeComponent();
-            if(LoginWindow.usuarioLogeado.Rol_Id != 1){
+            if(LoginWindow.UsuarioLogeado.Rol_Id != 1){
                 Articulos.Visibility = Visibility.Collapsed;
                 Usuarios.Visibility = Visibility.Collapsed;
             }
