@@ -4,11 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d"
-             d:DesignHeight="124" d:DesignWidth="312">
-    <Grid Height="121">
+             d:DesignHeight="149" d:DesignWidth="383">
+    <Grid Height="149">
         <Label Content="Usuario" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="50,16,0,0" Name="label1" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="158,21,0,0" Name="txtUser" VerticalAlignment="Top" Width="120" />
         <Label Content="Contraseña" FontWeight="DemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="50,71,0,0" Name="label2" VerticalAlignment="Top" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="158,72,0,0" Name="txtPassword" VerticalAlignment="Top" Width="120" />
+        <PasswordBox KeyDown="Enter" Height="23" HorizontalAlignment="Left" Margin="158,72,0,0" Name="txtPassword" VerticalAlignment="Top" Width="120" />
+        <Button Content="Ingresar"
+                Click="btnLogin_Click"
+                Height="23" HorizontalAlignment="Left" 
+                Margin="50,117,0,0" Name="btnLogin"
+                VerticalAlignment="Top" Width="80" />
     </Grid>
 </UserControl>
