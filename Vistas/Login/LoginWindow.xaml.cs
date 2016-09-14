@@ -48,8 +48,7 @@ namespace Vistas
         {
             Button btn = (Button)e.OriginalSource;
             // btn: tenemos disponiblidad de todos los metodos
-            //txtPassword.Password += btn.Content.ToString();
-
+            formLogin.txtPassword.Password += btn.Content.ToString();
         }
 
          /// <summary>
