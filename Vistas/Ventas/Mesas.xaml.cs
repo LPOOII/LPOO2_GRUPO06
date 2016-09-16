@@ -23,23 +23,6 @@ namespace Vistas
         {
             InitializeComponent();
         }
-        
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            btn11.Background = Brushes.Red;
-            btn17.Background = Brushes.Red;
-        }
-        
-        void mouseClickEvent(object sender, RoutedEventArgs args)
-        {
-
-            Button btn = (Button)args.OriginalSource;
-            if (btn.Background == Brushes.Red) { MessageBox.Show("Mesa Ocupada"); }
-            else
-            {
-                MessageBox.Show("Mesa Libre");
-            }
-        }
 
         private void salir(object sender, RoutedEventArgs e)
         {
