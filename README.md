@@ -1,3 +1,40 @@
+#Como usar git
+
+## Hacer un pull (Descargar del repositorio los cambios).
+
++ Para hacer un pull desde el gitExtensions u otro herramienta deben buscar la opcion de pull.
++ Si usan el cmd, podran hacerlo desde la carpeta del proyecto con el comando ```git pull origin```
+
+### Que hacer si me da error ?
+
+Pueden hacer dos cosas:
+
++ Hacer un stash desde su herramienta o desde la consola con ```git stash```. Esto eliminara sus cambios y regresara el repositorio al punto en el que lo descargaron. (Usenlo con cuidado)
++ Hacer commit y luego un merge. Esto se los recomiendo hacerlo desde el gitExtension, porque al tener el commit hecho e intentar hacer un pull les mostrara una herramienta para solucionar conflictos y se les sera mas facil elegir que cambios conservar. (Usenlo con cuidado de no reemplazar algo que no deban en el repositorio)
+
+## Hacer un push (Subir cambios al repositorio).
+
++ Primero deben agregar que archivos van a cambiar usando el add en sus herramientas o por comando con ```git add <Nombre_archivo>```
++ Seguido de esto deberan hacer un commit el cual va sobre los archivos que se incluyen en el add.
++ Deberan escribir un comentario relatando que tipos de cambios hicieron. 
++ Pueden hacer esto con el comando ```git commit -m "mi mensaje"```
++ Luego de tener todos nuestros archivos preparados para subir en la herramienta que usen hagan push o por comando ```git push origin```
+
+### Que hacer si me da error?
+
+Para resolver esto deberan hacer un merge. En donde deberan elegir que archivos cambiaran y cuales no. Insisto esto es mas facil desde el gitExtensions puesto que su herramienta para conflictos permite decidir que cambios reealizar.
+
+
+## A que se deben los errores?
+
+El error se da basicamente porque hiciste un cambio en un archivo que en el repositio cambio. Por ejemplo.
+
++ Editaste el Login.xaml
++ Alguien tambien lo edito y subio.
++ Al intentar subirlo o bajarlo la copia original tuya (sin tus cambios) no coincide con la actual en el repositorio.
++ Lo cual ocasiona conflictos con las versiones.
+
+
 #Laboratorio de programación orientada a objetos II
 
 ## Grupo 6
