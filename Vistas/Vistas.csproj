@@ -75,6 +75,9 @@
     <Compile Include="Login\FormLogin.xaml.cs">
       <DependentUpon>FormLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventas\MesaControl.xaml.cs">
+      <DependentUpon>MesaControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventas\Panel_cliente.xaml.cs">
       <DependentUpon>Panel_cliente.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
     <Page Include="Ventas\EstilosMesas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventas\MesaControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Ventas\Mesas.xaml">
       <SubType>Designer</SubType>
