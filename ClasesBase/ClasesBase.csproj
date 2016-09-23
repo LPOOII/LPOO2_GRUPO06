@@ -68,6 +68,7 @@
     <Compile Include="Model\OrdenPagoRealizadaModel.cs" />
     <Compile Include="Model\OtrosCostosModel.cs" />
     <Compile Include="Model\PedidoModel.cs" />
+    <Compile Include="Model\TrabajarArticulos.cs" />
     <Compile Include="Model\VentasModel.cs" />
     <Compile Include="OP_Items_Materia_Prima.cs" />
     <Compile Include="OP_Items_Otros_Costos.cs" />

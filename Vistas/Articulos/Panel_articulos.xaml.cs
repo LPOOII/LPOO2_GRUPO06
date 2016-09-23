@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClasesBase;
+using System.Data;
 
 namespace Vistas
 {
@@ -32,9 +33,9 @@ namespace Vistas
         /// <param name="e"></param>
         private void lista_articulos(object sender, RoutedEventArgs e)
         {
-            List<Articulo> lista = new List<Articulo>();
+            DataTable dt = TrabajarArticulos.TraerArticulos();
             //var grid = sender as DataGrid;
-            //grid.ItemsSource = lista;
+            //dataGridArticulos.ItemsSource = dt.DefaultView;
         }
 
         /// <summary>
@@ -95,8 +96,17 @@ namespace Vistas
             articulo.Art_Stock_Actual = Convert.ToInt32(actual.Text);
             articulo.Art_Maneja_Stock = true;
             articulo.Art_Margen_Beneficio = 10;
-            dataGridArticulos.Items.Add(articulo);
+            //dataGridArticulos.Items.Add(articulo);
             MessageBox.Show(articulo.ToString());
+        }
+        
+        private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var item = sender as ListViewItem;
+            if (item != null && item.IsSelected)
+            {
+                //Do your stuff
+            }
         }
 
     }
