@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace ClasesBase
 {
-    public class Cliente
+    public class Cliente : IDataErrorInfo
     {
         private int cli_Id;
 
@@ -95,6 +96,63 @@ namespace ClasesBase
                 "Email: " + Cli_Email + "\n" +
                 "Fecha de nacimiento: " + Cli_Fecha_Nac.ToString();
 
+        }
+
+        private string validar_Cli_Id() 
+        { 
+            if(cli_Id.Equals(null))
+            {
+                return "El valor del campo es obligatorio.";
+            }
+            if(cli_Id <= 0)
+            {
+                return "El valor no debe ser inferior a cero.";
+            }
+            return null;
+        }
+
+        private string validar_Cli_Nombre()
+        {
+            if (String.IsNullOrEmpty(cli_Nombre))
+            {
+                return "El valor del campo es obligatorio.";
+            }
+            return null;
+        }
+
+        private string validar_Cli_Email()
+        {
+            if (String.IsNullOrEmpty(cli_Email))
+            {
+                return "El valor del campo es obligatorio.";
+            }
+            return null;
+        }
+
+        public string Error
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string this[string columnName]
+        {
+            get 
+            {
+                string msg_error = null;
+                switch (columnName)
+                { 
+                    case "Cli_Id":
+                        msg_error = validar_Cli_Id();
+                        break;
+                    case "Cli_Nombre":
+                        msg_error = validar_Cli_Nombre();
+                        break;
+                    case "Cli_Email":
+                        msg_error = validar_Cli_Email();
+                        break;
+                }
+                return msg_error;
+            }
         }
     }
 }
