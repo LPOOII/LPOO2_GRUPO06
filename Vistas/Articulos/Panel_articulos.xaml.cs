@@ -22,7 +22,7 @@ namespace Vistas
     {
         public Panel_articulos()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         
@@ -32,8 +32,7 @@ namespace Vistas
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void lista_articulos(object sender, RoutedEventArgs e)
-        {
-            DataTable dt = TrabajarArticulos.TraerArticulos();
+        {            
             //var grid = sender as DataGrid;
             //dataGridArticulos.ItemsSource = dt.DefaultView;
         }
@@ -86,8 +85,7 @@ namespace Vistas
             articulo.Art_Id = 1;
             articulo.Art_Descrip = descripcion.Text;
             articulo.Fam_Id = 1;
-            articulo.Um_Id = 1;
-            
+            articulo.Um_Id = 1;            
             articulo.Art_Costo = Convert.ToInt32(costo.Text);
             articulo.Art_Stock_Min = Convert.ToInt32(minimo.Text);
             articulo.Art_Stock_Max = Convert.ToInt32(maximo.Text);
@@ -96,16 +94,22 @@ namespace Vistas
             articulo.Art_Stock_Actual = Convert.ToInt32(actual.Text);
             articulo.Art_Maneja_Stock = true;
             articulo.Art_Margen_Beneficio = 10;
+            //ListaArticulos.Items.Add(articulo);
             //dataGridArticulos.Items.Add(articulo);
             MessageBox.Show(articulo.ToString());
         }
         
+        /// <summary>
+        /// Metodo para atrapar evento click sobre las filas de la tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var item = sender as ListViewItem;
-            if (item != null && item.IsSelected)
-            {
-                //Do your stuff
+            if (item != null)
+            {                
+                // insertar algo                
             }
         }
 

@@ -9,7 +9,7 @@
         <ImageBrush ImageSource="../bg.jpg"/>
     </Window.Background>
     <Window.Resources>
-        <ObjectDataProvider x:Key="lista_articulos" ObjectType="{x:Type svc:TrabajarArticulos}" MethodName="TraerArticulos"></ObjectDataProvider>
+        <ObjectDataProvider x:Key="lista_art" ObjectType="{x:Type svc:TrabajarArticulos}" MethodName="TraerArticulos"/>
     </Window.Resources>
     <Grid>
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Familia" Height="28" HorizontalAlignment="Left" Margin="29,59,0,0" Name="label1" VerticalAlignment="Top" />
@@ -22,6 +22,7 @@
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Maneja stock" Height="28" HorizontalAlignment="Left" Margin="29,327,0,0" Name="label9" VerticalAlignment="Top" />
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Descripcion" Height="28" HorizontalAlignment="Left" Margin="29,24,0,0" Name="label10" VerticalAlignment="Top" />
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock maximo" Height="28" HorizontalAlignment="Left" Margin="29,190,0,0" Name="label11" VerticalAlignment="Top" />
+        
         <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,28,0,0" Name="descripcion" VerticalAlignment="Top" Width="120" />
         <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,127,0,0" Name="costo" VerticalAlignment="Top" Width="120" />
         <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,159,0,0" Name="minimo" VerticalAlignment="Top" Width="120" />
@@ -29,24 +30,35 @@
         <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,227,0,0" Name="precio" VerticalAlignment="Top" Width="120" />
         <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,261,0,0" Name="reposicion" VerticalAlignment="Top" Width="120" />
         <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,297,0,0" Name="actual" VerticalAlignment="Top" Width="120" />
+        
         <RadioButton Content="Si" Foreground="White" FontWeight="DemiBold" Height="16" HorizontalAlignment="Left" Margin="177,333,0,0" Name="radioSi" VerticalAlignment="Top" />
         <RadioButton Content="No" FontWeight="DemiBold" Foreground="White" Height="16" HorizontalAlignment="Left" Margin="228,333,0,0" Name="radioNo" VerticalAlignment="Top" />
+        
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,61,0,0" Name="stockSi" Loaded="load_familia" VerticalAlignment="Top" Width="120" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,94,0,0" Name="stockNo" Loaded="load_unidades" VerticalAlignment="Top" Width="120" />
+        
         <Button Style="{StaticResource ResourceKey=btn_mouse_over}"
                 Content="Guardar" Height="23" HorizontalAlignment="Left"
                 Margin="123,363,0,0" Name="guardarBtn" VerticalAlignment="Top"
                 Width="75" Click="guardarBtn_Click" />
-        
-        <ListView Name="ListArt" 
-                  DataContext="{Binding Source={StaticResource ResourceKey=lista_articulos}}"
-                  ItemsSource="{Binding}" Margin="360,61,22,184">
+
+        <ListView ItemsSource="{Binding Source={StaticResource lista_art}}"
+                  x:Name="listadoArticulos"
+                  Margin="360,61,22,184">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Path=art_Id}"></GridViewColumn>
-                        <GridViewColumn Header="Descripcion" Width="100" DisplayMemberBinding="{Binding Path=art_Descrip}"></GridViewColumn>
-                    </GridView.Columns>                    
+                        <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Path=art_id}"></GridViewColumn>
+                        <GridViewColumn Header="Descripcion" Width="100" DisplayMemberBinding="{Binding Path=art_descrip}"></GridViewColumn>
+                        <GridViewColumn Header="Costo" Width="50" DisplayMemberBinding="{Binding Path=art_costo}"></GridViewColumn>
+                        <GridViewColumn Header="Beneficio" Width="100" DisplayMemberBinding="{Binding Path=art_margen_beneficio}"></GridViewColumn>
+                        <GridViewColumn Header="Precio" Width="50" DisplayMemberBinding="{Binding Path=art_precio}"></GridViewColumn>
+                        <GridViewColumn Header="S. min." Width="50" DisplayMemberBinding="{Binding Path=art_stock_min}"></GridViewColumn>
+                        <GridViewColumn Header="S max." Width="50" DisplayMemberBinding="{Binding Path=art_stock_max}"></GridViewColumn>
+                        <GridViewColumn Header="Reposicion" Width="50" DisplayMemberBinding="{Binding Path=art_stock_reposicion}"></GridViewColumn>
+                        <GridViewColumn Header="S. actual" Width="50" DisplayMemberBinding="{Binding Path=art_stock_actual}"></GridViewColumn>
+                        <GridViewColumn Header="Familia" Width="50" DisplayMemberBinding="{Binding Path=fam_id}"></GridViewColumn>
+                    </GridView.Columns>
                 </GridView>
             </ListView.View>
             <ListView.ItemContainerStyle>
