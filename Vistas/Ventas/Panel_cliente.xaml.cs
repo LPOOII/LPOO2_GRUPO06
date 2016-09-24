@@ -45,5 +45,32 @@ namespace Vistas
             fechaNacimiento.SelectedDate = null;
             MessageBox.Show(cliente.ToString());
         }
+
+        private void idCliente_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(idCliente.Text != "0"){
+                Cliente clienteEncontrado = TrabajarCliente.buscarCliente(idCliente.Text);
+                if (clienteEncontrado != null)
+                {
+                    nombreApellido.Text = clienteEncontrado.Cli_Nombre;
+                    domicilio.Text = clienteEncontrado.Cli_Domicilio;
+                    departamento.Text = clienteEncontrado.Cli_Departamento;
+                    email.Text = clienteEncontrado.Cli_Email;
+                    codigoPostal.Text = clienteEncontrado.Cli_Codigo_Postal;
+                    telefono.Text = clienteEncontrado.Cli_Telefono;
+                    fechaNacimiento.SelectedDate = clienteEncontrado.Cli_Fecha_Nac;
+                }
+                else 
+                {
+                    nombreApellido.Text = "";
+                    domicilio.Text = "";
+                    departamento.Text = "";
+                    email.Text = "";
+                    codigoPostal.Text = "";
+                    telefono.Text = "";
+                    fechaNacimiento.SelectedDate = null;
+                }
+            }            
+        }
     }
 }
