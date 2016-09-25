@@ -4,7 +4,7 @@
         xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
         WindowStyle="SingleBorderWindow" Foreground="White"
         ResizeMode="NoResize"
-        Title="Panel cliente" Height="394" Width="700">
+        Title="Panel cliente" Height="394" Width="700" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="../bg.jpg"/>
     </Window.Background>
