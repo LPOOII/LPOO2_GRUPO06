@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClasesBase;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace Vistas
 {
@@ -132,6 +133,12 @@ namespace Vistas
                     fechaNacimiento.SelectedDate = null;
                 }
             }            
+        }
+
+        private void inputValidation(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

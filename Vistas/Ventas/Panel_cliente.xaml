@@ -29,6 +29,7 @@
                  Margin="157,26,0,0" Name="idCliente"
                  DataContext="{StaticResource DATA_CLIENTE}"
                  Style="{StaticResource MsgError}"
+                 PreviewTextInput="inputValidation"
                  VerticalAlignment="Top" Width="120" TextChanged="idCliente_TextChanged">
             <TextBox.Text>
                 <Binding Path="Cli_Id" UpdateSourceTrigger="PropertyChanged"
