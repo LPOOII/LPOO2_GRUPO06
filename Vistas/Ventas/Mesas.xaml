@@ -3,20 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Mesas" mc:Ignorable="d"
         xmlns:mesa="clr-namespace:Vistas.Ventas"
+        xmlns:src="clr-namespace:ClasesBase;assembly=ClasesBase"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        d:DesignHeight="485" d:DesignWidth="430" SizeToContent="WidthAndHeight"
+        d:DesignHeight="747" d:DesignWidth="430" SizeToContent="WidthAndHeight"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize">    
     <Window.Background>        
         <ImageBrush ImageSource="../bg.jpg"/>        
     </Window.Background>
-    <Grid Height="485" Width="430">
+    <Window.Resources>
+        <src:ConversorDeEstados x:Key="ConvEstados"></src:ConversorDeEstados>
+        <XmlDataProvider x:Key="tipo_estado" Source="EstadosMesa.xml" XPath="/estados" />
+    </Window.Resources>
+    <Grid Height="546" Width="430">
         <mesa:MesaControl Margin="24,14,44,130"></mesa:MesaControl>
-        <Button Content="Salir"  Style="{StaticResource ResourceKey=btn_mesa}" Margin="310,369,0,0" Name="btnSalir" Click="salir"/>        
-        <Label Content="" Height="35" HorizontalAlignment="Left" Margin="44,380,0,72" Name="lblLibre" VerticalAlignment="Center" Width="35" Background="#FF57A639" Foreground="White" />        
-        <Label Content="" Height="35" HorizontalAlignment="Left" Margin="130,379,0,71" Name="lblOcupado" VerticalAlignment="Center" Width="35" Background="#FFFE0000" Foreground="White" />        
-        <Label Content="Libre" Height="34" Margin="85,380,306,0" Name="label1" VerticalAlignment="Top" Foreground="White" />        
-        <Label Content="Ocupado" Height="34" HorizontalAlignment="Left" Margin="171,379,0,0" Name="label2" VerticalAlignment="Top" Width="61" Foreground="White" />        
+        <Button Content="Salir"  Style="{StaticResource ResourceKey=btn_mesa}" Margin="310,432,0,0" Name="btnSalir" Click="salir"/>
+        <ListBox ItemsSource="{Binding Source={StaticResource tipo_estado},XPath=tipo/@name}" Height="85" HorizontalAlignment="Left" Margin="170,430,0,0" Name="cmbTipoEstado" VerticalAlignment="Top" Width="120" />
+        <Label Content="Estado de Mesa" Background="{Binding ElementName=cmbTipoEstado, Path=SelectedValue, 
+            Converter={StaticResource ConvEstados}}" Height="28" HorizontalAlignment="Left" Margin="59,434,0,0" Name="label4" VerticalAlignment="Top" Foreground="#FFEBDFDF" />
     </Grid>
     
 </Window>
