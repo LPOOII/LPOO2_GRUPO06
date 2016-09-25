@@ -71,13 +71,14 @@
                   HorizontalAlignment="Left" Margin="330,35,0,0"
                   Name="dataGridClientes" VerticalAlignment="Top" Width="316">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nombre y apellido" Binding="{Binding Cli_Nombre}"/>
-                <DataGridTextColumn Header="Domicilio" Binding="{Binding Cli_Nombre}"/>
-                <DataGridTextColumn Header="Departamento" Binding="{Binding Cli_Domicilio}"/>
-                <DataGridTextColumn Header="C. Postal" Binding="{Binding Cli_Codigo_Postal}"/>
-                <DataGridTextColumn Header="Telefono" Binding="{Binding Cli_Telefono}"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Cli_Email}"/>
-                <DataGridTextColumn Header="F. de Nac." Binding="{Binding Cli_Fecha_Nac}"/>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Nombre y apellido" Binding="{Binding Cliente}"/>
+                <DataGridTextColumn Header="Domicilio" Binding="{Binding Domicilio}"/>
+                <DataGridTextColumn Header="Departamento" Binding="{Binding Departamento}"/>
+                <DataGridTextColumn Header="C. Postal" Binding="{Binding Codigo Postal}"/>
+                <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="F. de Nac." Binding="{Binding Fecha Nacimiento}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
