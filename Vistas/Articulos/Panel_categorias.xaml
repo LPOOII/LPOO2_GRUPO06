@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowStyle="SingleBorderWindow" Foreground="White"
         ResizeMode="NoResize"
-        Title="Panel categoria" Height="350" Width="400">
+        Title="Panel categoria" Height="350" Width="400" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="../bg.jpg"/>
     </Window.Background>

@@ -5,7 +5,7 @@
         WindowStyle="SingleBorderWindow"
         xmlns:control="clr-namespace:Vistas.Login"
         Closing="windows_closed"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
         <Window.Background>
             <ImageBrush ImageSource="../bg.jpg"/>
         </Window.Background>
