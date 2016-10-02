@@ -17,10 +17,11 @@
     </Window.Resources>
     <Grid Height="546" Width="430">
         <mesa:MesaControl Margin="24,14,44,130"></mesa:MesaControl>
-        <Button Content="Salir"  Style="{StaticResource ResourceKey=btn_mesa}" Margin="310,432,0,0" Name="btnSalir" Click="salir"/>
-        <ListBox ItemsSource="{Binding Source={StaticResource tipo_estado},XPath=tipo/@name}" Height="85" HorizontalAlignment="Left" Margin="170,430,0,0" Name="cmbTipoEstado" VerticalAlignment="Top" Width="120" />
-        <Label Content="Estado de Mesa" Background="{Binding ElementName=cmbTipoEstado, Path=SelectedValue, 
-            Converter={StaticResource ConvEstados}}" Height="28" HorizontalAlignment="Left" Margin="59,434,0,0" Name="label4" VerticalAlignment="Top" Foreground="#FFEBDFDF" />
+        <Button Content="Salir"  Style="{StaticResource ResourceKey=btn_mesa}" Margin="310,419,0,0" Name="btnSalir" Click="salir"/>
+        <ListBox ItemsSource="{Binding Source={StaticResource tipo_estado},XPath=tipo/@name}" 
+                  Background="{Binding ElementName=cmbTipoEstado, Path=SelectedValue, 
+            Converter={StaticResource ConvEstados}}" Height="116" HorizontalAlignment="Left" Margin="154,418,0,0" Name="cmbTipoEstado" VerticalAlignment="Top" Width="120" />
+        <Label Content="Estados de Mesas" Height="28" HorizontalAlignment="Left" Margin="24,418,0,0" Name="label1" VerticalAlignment="Top" Width="124" FontFamily="Bookman Old Style" FontWeight="Bold" Foreground="#FFFFF5F5" />
     </Grid>
     
 </Window>
