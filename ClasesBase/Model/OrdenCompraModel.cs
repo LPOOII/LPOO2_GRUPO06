@@ -166,8 +166,9 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@stkrep", article.Art_Stock_Reposicion);
             cmd.Parameters.AddWithValue("@stkactual", article.Art_Stock_Actual);
             cmd.Parameters.AddWithValue("@manjstk", article.Art_Maneja_Stock);
-            cmd.Parameters.AddWithValue("@fam", article.Fam_Id);
-            cmd.Parameters.AddWithValue("@unMed", article.Um_Id);
+            // comentado para trabajar en el tp3
+            //cmd.Parameters.AddWithValue("@fam", article.Fam_Id);
+            //cmd.Parameters.AddWithValue("@unMed", article.Um_Id);
 
             cnn.Open();
             cmd.ExecuteNonQuery();

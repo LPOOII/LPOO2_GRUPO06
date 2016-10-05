@@ -88,7 +88,7 @@ namespace ClasesBase.Model
             Articulo oArticulo = null;
             if (reader.Read() == true)
             {
-                oArticulo = new Articulo((int)reader["Art_Id"], (int)reader["Fam_Id"], (int)reader["Um_Id"], (decimal)reader["Art_Costo"], (decimal)reader["Art_Margen_Beneficio"], (decimal)reader["Art_Precio"], (decimal)reader["Art_Stock_Min"], (decimal)reader["Art_Stock_Reposicion"], (decimal)reader["Art_Stock_Actual"], (bool)reader["Art_Maneja_Stock"], (string)reader["Art_Descrip"], (decimal)reader["Art_Stock_Max"]);
+                oArticulo = new Articulo((int)reader["Art_Id"], (Familia)reader["Fam_Id"], (Unidad_Medida)reader["Um_Id"], (decimal)reader["Art_Costo"], (decimal)reader["Art_Margen_Beneficio"], (decimal)reader["Art_Precio"], (decimal)reader["Art_Stock_Min"], (decimal)reader["Art_Stock_Reposicion"], (decimal)reader["Art_Stock_Actual"], (bool)reader["Art_Maneja_Stock"], (string)reader["Art_Descrip"], (decimal)reader["Art_Stock_Max"]);
             }
             cnn.Close();
             return oArticulo;
@@ -113,8 +113,9 @@ namespace ClasesBase.Model
             cmd.Parameters.AddWithValue("@stkrep", article.Art_Stock_Reposicion);
             cmd.Parameters.AddWithValue("@stkactual", article.Art_Stock_Actual);
             cmd.Parameters.AddWithValue("@manjstk", article.Art_Maneja_Stock);
-            cmd.Parameters.AddWithValue("@fam", article.Fam_Id);
-            cmd.Parameters.AddWithValue("@unMed", article.Um_Id);
+            //comentado para trabajar en el tp3
+            //cmd.Parameters.AddWithValue("@fam", article.Fam_Id);
+            //cmd.Parameters.AddWithValue("@unMed", article.Um_Id);
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();       
