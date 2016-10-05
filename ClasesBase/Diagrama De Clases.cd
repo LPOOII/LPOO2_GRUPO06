@@ -1,59 +1,339 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ClasesBase.Articulo" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="2.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAEAAAJARSAAAMAAIAAhCACAICgCgACAAgAAAAABgAA=</HashCode>
+      <HashCode>IAEQAAJARQAAAMAkJAAhKACAgCgCgACAAgAIAAABgAA=</HashCode>
       <FileName>Articulo.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Categoria" />
+      <Property Name="Unidad_Medida" />
+      <Property Name="Familia" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ClasesBase.Cliente" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAACAAAQAgQgEAAkAAAAIAABAAAAAQAQAAIAECAA=</HashCode>
+      <HashCode>gAAAAACAAAQAgQgECAkAAAAIAAhAAAAAQAQAAIAECIA=</HashCode>
       <FileName>Cliente.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ClasesBase.Familia" Collapsed="true">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="5.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAIAAAAAAAAACAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAMAAAAAAAAACAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Familia.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Historial_Login" Collapsed="true">
-    <Position X="4" Y="1.75" Width="1.5" />
+    <Position X="5.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAkAAAAJAAAAA=</HashCode>
       <FileName>Historial_Login.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Proveedor" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAgBQEAAAEAAAAIAAAAjAACAAAAAiAAAAAAAAAAIAAA=</HashCode>
       <FileName>Proveedor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Rol" Collapsed="true">
-    <Position X="7.5" Y="1" Width="1.5" />
+    <Position X="9.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAIAAAAAAIAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>Rol.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Unidad_Medida" Collapsed="true">
-    <Position X="6" Y="1.5" Width="1.5" />
+    <Position X="5.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAIAABAAAAAQAAQAAAAEA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAgAAAAIAABAAAAAQAAQAAAAEA=</HashCode>
       <FileName>Unidad_Medida.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Usuario" Collapsed="true">
-    <Position X="1.75" Y="2" Width="1.5" />
+    <Position X="11" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAQAAAAMAAAABBAAACAUAAAgBAAAIAAAAAgAA=</HashCode>
       <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Categoria" Collapsed="true">
+    <Position X="5.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAABAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Categoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.ConversorDeEstados" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConversorDeEstados.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ClasesBase.Factura" Collapsed="true">
+    <Position X="11" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAgCAAAAAAACAIIAAgACAAAAAAAACAIAgAAAAIA=</HashCode>
+      <FileName>Factura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Items_Factura" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAkAAAAAAQAAAAUAAAAUAAAAEAIACAACAAAAAAA=</HashCode>
+      <FileName>Items_Factura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Items_Orden_Compra" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAIAgAASAIAAEIAAAACAAAAAIAAAACAAAAAAA=</HashCode>
+      <FileName>Items_Orden_Compra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Items_Pedido" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAECAAAAAQAAAAEAAAASAAAAEAIAAAAKAAAACAA=</HashCode>
+      <FileName>Items_Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Mesa" Collapsed="true">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAABAAAAAAAQAEAAEABAAAA=</HashCode>
+      <FileName>Mesa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.ArticuloModel" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAEAAEAAAAAAAABAAAAAAAABAACAAQAASAE=</HashCode>
+      <FileName>Model\ArticuloModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.ClienteModel" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAACAAAAQ=</HashCode>
+      <FileName>Model\ClienteModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.CompraRealizadaModel" Collapsed="true">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\CompraRealizadaModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.GestionComprasModel" Collapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAACAAAAAAAAAAAgAABAAAAAAAAAABAAAAAAAgAAA=</HashCode>
+      <FileName>Model\GestionComprasModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.OrdenCompraModel" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAgBAAAAAAAQAAAAAAAAQAAACAABAAAAAAAAAAA=</HashCode>
+      <FileName>Model\OrdenCompraModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.TrabajarArticulos" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Model\TrabajarArticulos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.TrabajarCliente" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\TrabajarCliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.UsuarioModel" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBEgAAAAAAAIAAACAAAAAAIAAAAAAAAAAAAQAAAAEAA=</HashCode>
+      <FileName>Model\UsuarioModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.VentasModel" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAgAAAIAAAAAACAAAAAACAEACAAAAAAAIIAIAIA=</HashCode>
+      <FileName>Model\VentasModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.OP_Items_Materia_Prima" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgQEAIAAAASAAAAEAAACAAAAAgAAAAAAAAAAAAIE=</HashCode>
+      <FileName>OP_Items_Materia_Prima.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.OP_Items_Otros_Costos" Collapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAQFAIAAAASAAAAEIAAAACAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>OP_Items_Otros_Costos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Orden_Compra" Collapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAIAAAAKAAAAGAAAABAAAAAAAABAAAA=</HashCode>
+      <FileName>Orden_Compra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Orden_Pago" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQAAAAAAAAIAAAAKAAAACAAAAAAAgAAAAKAAAAE=</HashCode>
+      <FileName>Orden_Pago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Orden_Produccion" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAQEQAAAAAAAAAAAQAAAAAAABAAAAgAgAAoAIAAE=</HashCode>
+      <FileName>Orden_Produccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Otros_Costos" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAYAAAoAAAAKAAAAAAAEAAEAAAABAA=</HashCode>
+      <FileName>Otros_Costos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Pedido" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAACAAAAAAhCAAAAAgACAAAAAAAgAAAAAAgACAA=</HashCode>
+      <FileName>Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.PedidoResto" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgAAAAGAAAABAhCAAkAAgADAAAAAAAgAAAAAAgACAA=</HashCode>
+      <FileName>PedidoResto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Producto" Collapsed="true">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAQAAAAAAAAAAAQAACAAAABgAAAgAgAAgAIAAA=</HashCode>
+      <FileName>Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.CompraOrdenadasModel" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAEAAAAAAAAAAAAAAEAAACAAAAAAAAAAE=</HashCode>
+      <FileName>Model\CompraOrdenadasModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.FamiliaModel" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAEAYAAAA=</HashCode>
+      <FileName>Model\FamiliaModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.GestionPagoModel" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARACAIACAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Model\GestionPagoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.GestionProduccionModel" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAgAQAAEAAAAAASAAACAAACAAgAAAIABA=</HashCode>
+      <FileName>Model\GestionProduccionModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.GestionProductoModel" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAgAAQCAABAAAAAAAAAAAAAACAAAAAAgAAACAAA=</HashCode>
+      <FileName>Model\GestionProductoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.ListarMateriaPrimaModel" Collapsed="true">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAQA=</HashCode>
+      <FileName>Model\ListarMateriaPrimaModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.ListarOrdenProduccionModel" Collapsed="true">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ListarOrdenProduccionModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.ListarPedidoModel" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Model\ListarPedidoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.ListarProductosTerminadosModel" Collapsed="true">
+    <Position X="7.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ListarProductosTerminadosModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.ListarVentaModel" Collapsed="true">
+    <Position X="9.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAA=</HashCode>
+      <FileName>Model\ListarVentaModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.OrdenPagoRealizadaModel" Collapsed="true">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAABAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Model\OrdenPagoRealizadaModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.OtrosCostosModel" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAACgAAAAAAAAAAAAQCAAAAACAAAAAAAA=</HashCode>
+      <FileName>Model\OtrosCostosModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Model.PedidoModel" Collapsed="true">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAoCAAAAAAAAAAAAAAgAAAACAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Model\PedidoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Properties.Settings" Collapsed="true">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAE=</HashCode>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
