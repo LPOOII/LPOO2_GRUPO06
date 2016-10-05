@@ -44,7 +44,14 @@ namespace ClasesBase
             da.Fill(dt);
 
             foreach (DataRow row in dt.Rows)
-            {
+            {                
+                Familia familia = new Familia();
+                familia.Fam_Id = (int)row["fam_id"];
+                familia.Fam_Descrip = (string)row["fam_descrip"];
+                Unidad_Medida unidad_Medida = new Unidad_Medida();
+                unidad_Medida.Um_Id = (int)row["um_id"];
+                unidad_Medida.Um_Abrev = (string)row["um_abrev"];
+                unidad_Medida.Um_Descrip = (string)row["um_descrip"];
                 Articulo articulo = new Articulo();
                 articulo.Art_Id = (int)row["art_id"];
                 articulo.Art_Descrip = (string)row["art_descrip"];
@@ -54,8 +61,8 @@ namespace ClasesBase
                 articulo.Art_Stock_Min = (decimal)row["art_stock_min"];
                 articulo.Art_Stock_Max = (decimal)row["art_stock_max"];
                 articulo.Art_Maneja_Stock = (Boolean)row["art_maneja_stock"];
-                articulo.Familia = (Familia)row["fam_id"];
-                articulo.Unidad_Medida = (Unidad_Medida)row["um_id"];
+                articulo.Familia = familia;
+                articulo.Unidad_Medida = unidad_Medida;
                 obCol.Add(articulo);
             }
             return obCol;
