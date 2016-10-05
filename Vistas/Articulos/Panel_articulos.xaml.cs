@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClasesBase;
 using System.Data;
+using System.Collections.ObjectModel;
 
 namespace Vistas
 {
@@ -22,7 +23,8 @@ namespace Vistas
     {
         public Panel_articulos()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            ObservableCollection<Articulo> listaArt = TrabajarArticulos.collectionArticulos();
         }
 
         
@@ -84,8 +86,8 @@ namespace Vistas
             Articulo articulo = new Articulo();
             articulo.Art_Id = 1;
             articulo.Art_Descrip = descripcion.Text;
-            articulo.Fam_Id = 1;
-            articulo.Um_Id = 1;            
+            //articulo.Fam_Id = 1;
+            //articulo.Um_Id = 1;            
             articulo.Art_Costo = Convert.ToInt32(costo.Text);
             articulo.Art_Stock_Min = Convert.ToInt32(minimo.Text);
             articulo.Art_Stock_Max = Convert.ToInt32(maximo.Text);
