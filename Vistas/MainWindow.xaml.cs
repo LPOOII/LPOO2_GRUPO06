@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Vistas.Articulos;
 
 namespace Vistas
 {
@@ -75,6 +76,12 @@ namespace Vistas
         {
             VentaMesas mesas = new VentaMesas();
             mesas.Show();
+        }
+
+        private void ABM(object sender, RoutedEventArgs e)
+        {
+            abm_articulos abmArt = new abm_articulos();
+            abmArt.Show();
         }
 
     }

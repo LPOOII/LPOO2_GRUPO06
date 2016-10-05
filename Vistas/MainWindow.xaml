@@ -11,6 +11,7 @@
             <Menu DockPanel.Dock="Top" Width="Auto" Background="#8D8D8080" Foreground="White" FontWeight="DemiBold">
                 <MenuItem Header="_Articulos" Name="Articulos">
                     <MenuItem Header="Panel de articulos" Foreground="Black" Click="Panel_articulos"/>
+                    <MenuItem Header="ABM Articulos" Foreground="Black" Click="ABM"/>
                     <MenuItem Header="Panel de categoria" Foreground="Black" Click="Panel_categorias"/>
                     <MenuItem Header="_Familias" Foreground="Black" Click="Familias"/>
                     <MenuItem Header="_Unidades de medida" Foreground="Black" Click="Unidades_medida"/>
