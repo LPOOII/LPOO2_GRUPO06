@@ -1,71 +1,101 @@
 ﻿<Window x:Class="Vistas.Panel_articulos"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
+        xmlns:data="clr-namespace:ClasesBase;assembly=ClasesBase"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
         WindowStyle="SingleBorderWindow"
         ResizeMode="NoResize"
-        Title="Panel articulos" Height="450" Width="700" WindowStartupLocation="CenterScreen">
+        Title="Panel articulos" Height="542" Width="884" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Window.Background>
-        <ImageBrush ImageSource="../bg.jpg"/>
+        <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg"/>
     </Window.Background>
     <Window.Resources>
-        <ObjectDataProvider x:Key="lista_art" ObjectType="{x:Type svc:TrabajarArticulos}" MethodName="TraerArticulos"/>
+        
+        <ObjectDataProvider x:Key="LIST_ARTICLE" 
+                            ObjectType="{x:Type data:TrabajarArticulos}" 
+                            MethodName="collectionArticulos">
+        </ObjectDataProvider>
+        <CollectionViewSource x:Key="VISTA_ARTICLE" Source="{StaticResource ResourceKey=LIST_ARTICLE}" >
+            
+        </CollectionViewSource>
+        <ObjectDataProvider x:Key="LIST_FAMILY" 
+                            ObjectType="{x:Type data:TrabajarArticulos}" 
+                            MethodName="collectionFamilias">
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="LIST_UNIT" 
+                            ObjectType="{x:Type data:TrabajarArticulos}" 
+                            MethodName="collectionUnidadMedidas">
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="LIST_CATEGORY" 
+                            ObjectType="{x:Type data:TrabajarArticulos}" 
+                            MethodName="collectionCategoria">
+        </ObjectDataProvider>
     </Window.Resources>
-    <Grid>
+    <Grid Height="459">
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Familia" Height="28" HorizontalAlignment="Left" Margin="29,59,0,0" Name="label1" VerticalAlignment="Top" />
-        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Unidad de medida" Height="28" HorizontalAlignment="Left" Margin="29,92,0,0" Name="label2" VerticalAlignment="Top" />
-        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Costo"  Height="28" HorizontalAlignment="Left" Margin="29,124,0,0" Name="label3" VerticalAlignment="Top" />
-        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Precio" Height="28" HorizontalAlignment="Left" Margin="29,224,0,0" Name="label5" VerticalAlignment="Top" />
-        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock minimo" Height="28" HorizontalAlignment="Left" Margin="29,156,0,0" Name="label6" VerticalAlignment="Top" />
-        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock reposicion" Height="28" HorizontalAlignment="Left" Margin="29,258,0,0" Name="label7" VerticalAlignment="Top" />
-        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock actual" Height="28" HorizontalAlignment="Left" Margin="29,294,0,0" Name="label8" VerticalAlignment="Top" />
-        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Maneja stock" Height="28" HorizontalAlignment="Left" Margin="29,327,0,0" Name="label9" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Unidad de medida" Height="28" HorizontalAlignment="Left" Margin="29,117,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Costo"  Height="28" HorizontalAlignment="Left" Margin="29,149,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Precio" Height="28" HorizontalAlignment="Left" Margin="29,249,0,0" Name="label5" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock minimo" Height="28" HorizontalAlignment="Left" Margin="29,181,0,0" Name="label6" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock reposicion" Height="28" HorizontalAlignment="Left" Margin="29,283,0,0" Name="label7" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock actual" Height="28" HorizontalAlignment="Left" Margin="29,319,0,0" Name="label8" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Maneja stock" Height="28" HorizontalAlignment="Left" Margin="29,352,0,0" Name="label9" VerticalAlignment="Top" />
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Descripcion" Height="28" HorizontalAlignment="Left" Margin="29,24,0,0" Name="label10" VerticalAlignment="Top" />
-        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock maximo" Height="28" HorizontalAlignment="Left" Margin="29,190,0,0" Name="label11" VerticalAlignment="Top" />
+        <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Stock maximo" Height="28" HorizontalAlignment="Left" Margin="29,215,0,0" Name="label11" VerticalAlignment="Top" />
         
         <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,28,0,0" Name="descripcion" VerticalAlignment="Top" Width="120" />
-        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,127,0,0" Name="costo" VerticalAlignment="Top" Width="120" />
-        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,159,0,0" Name="minimo" VerticalAlignment="Top" Width="120" />
-        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,193,0,0" Name="maximo" VerticalAlignment="Top" Width="120" />
-        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,227,0,0" Name="precio" VerticalAlignment="Top" Width="120" />
-        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,261,0,0" Name="reposicion" VerticalAlignment="Top" Width="120" />
-        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,297,0,0" Name="actual" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,152,0,0" Name="costo" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,184,0,0" Name="minimo" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,218,0,0" Name="maximo" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,252,0,0" Name="precio" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,286,0,0" Name="reposicion" VerticalAlignment="Top" Width="120" />
+        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="164,322,0,0" Name="actual" VerticalAlignment="Top" Width="120" />
         
-        <RadioButton Content="Si" Foreground="White" FontWeight="DemiBold" Height="16" HorizontalAlignment="Left" Margin="177,333,0,0" Name="radioSi" VerticalAlignment="Top" />
-        <RadioButton Content="No" FontWeight="DemiBold" Foreground="White" Height="16" HorizontalAlignment="Left" Margin="228,333,0,0" Name="radioNo" VerticalAlignment="Top" />
+        <RadioButton Content="Si" Foreground="White" FontWeight="DemiBold" Height="16" HorizontalAlignment="Left" Margin="177,358,0,0" Name="radioSi" VerticalAlignment="Top" />
+        <RadioButton Content="No" FontWeight="DemiBold" Foreground="White" Height="16" HorizontalAlignment="Left" Margin="228,358,0,0" Name="radioNo" VerticalAlignment="Top" />
         
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,61,0,0" Name="stockSi" Loaded="load_familia" VerticalAlignment="Top" Width="120" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,94,0,0" Name="stockNo" Loaded="load_unidades" VerticalAlignment="Top" Width="120" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,61,0,0" Name="cmbFamilia" 
+                   VerticalAlignment="Top" Width="120"
+                  ItemsSource="{Binding Source={StaticResource LIST_FAMILY}}" 
+                  DisplayMemberPath="Fam_Descrip"  
+                  SelectedValuePath="Fam_Descrip"       />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,119,0,0" Name="cmbUnidadMedida" 
+                  VerticalAlignment="Top" Width="120" 
+                   ItemsSource="{Binding Source={StaticResource LIST_UNIT}}" 
+                  DisplayMemberPath="Um_Descrip"  
+                  SelectedValuePath="Um_Descrip"/>
         
         <Button Style="{StaticResource ResourceKey=btn_mouse_over}"
                 Content="Guardar" Height="23" HorizontalAlignment="Left"
-                Margin="123,363,0,0" Name="guardarBtn" VerticalAlignment="Top"
+                Margin="204,380,0,0" Name="guardarBtn" VerticalAlignment="Top"
                 Width="75" Click="guardarBtn_Click" />
 
-        <ListView ItemsSource="{Binding Source={StaticResource lista_art}}"
-                  x:Name="listadoArticulos"
-                  Margin="360,61,22,184">
+        <ListView ItemsSource="{Binding Source={StaticResource VISTA_ARTICLE}}"
+                  x:Name="ArticulosListadosf" Margin="290,28,12,85"  IsSynchronizedWithCurrentItem="True">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Path=art_id}"></GridViewColumn>
-                        <GridViewColumn Header="Descripcion" Width="100" DisplayMemberBinding="{Binding Path=art_descrip}"></GridViewColumn>
-                        <GridViewColumn Header="Costo" Width="50" DisplayMemberBinding="{Binding Path=art_costo}"></GridViewColumn>
-                        <GridViewColumn Header="Beneficio" Width="100" DisplayMemberBinding="{Binding Path=art_margen_beneficio}"></GridViewColumn>
-                        <GridViewColumn Header="Precio" Width="50" DisplayMemberBinding="{Binding Path=art_precio}"></GridViewColumn>
-                        <GridViewColumn Header="S. min." Width="50" DisplayMemberBinding="{Binding Path=art_stock_min}"></GridViewColumn>
-                        <GridViewColumn Header="S max." Width="50" DisplayMemberBinding="{Binding Path=art_stock_max}"></GridViewColumn>
-                        <GridViewColumn Header="Reposicion" Width="50" DisplayMemberBinding="{Binding Path=art_stock_reposicion}"></GridViewColumn>
-                        <GridViewColumn Header="S. actual" Width="50" DisplayMemberBinding="{Binding Path=art_stock_actual}"></GridViewColumn>
-                        <GridViewColumn Header="Familia" Width="50" DisplayMemberBinding="{Binding Path=fam_id}"></GridViewColumn>
+                        <GridViewColumn Header="Codigo" Width="50" DisplayMemberBinding="{Binding Art_Id}" />
+                        <GridViewColumn Header="Descripcion" Width="110" DisplayMemberBinding="{Binding Art_Descrip}" />
+                        <GridViewColumn Header="Familia" Width="126" DisplayMemberBinding="{Binding Fam_Id.Fam_Descrip}" />
+                        <GridViewColumn Header="Categoria" Width="100" DisplayMemberBinding="{Binding Cat_Id.Cat_Descrip}" />
+                        <GridViewColumn Header="Unidad Medida" Width="100" DisplayMemberBinding="{Binding Um_Id.Um_Descrip}" />
+                        <GridViewColumn Header="Costo" Width="90" DisplayMemberBinding="{Binding Art_Costo}" />
                     </GridView.Columns>
                 </GridView>
             </ListView.View>
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ListViewItem_PreviewMouseLeftButtonDown" />
-                </Style>
-            </ListView.ItemContainerStyle>
         </ListView>
+        <Label Content="Categoria" Height="28" HorizontalAlignment="Left" Margin="29,90,0,0" Name="label4" Style="{StaticResource label_articulo}" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,90,0,0" Name="cmbCategoria"
+                  VerticalAlignment="Top" Width="120"
+                  ItemsSource="{Binding Source={StaticResource LIST_CATEGORY}}" 
+                  DisplayMemberPath="Cat_Descrip"  
+                  SelectedValuePath="Cat_Descrip"/>
+        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="204,422,0,0" Name="txtDeleteArt" VerticalAlignment="Top" Width="120" TextChanged="txtDeleteArt_TextChanged" />
+        <Button  Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="437,421,0,0" Name="btnEliminar" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"/>
+        <Button  Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="350,421,0,0" Name="btnModificar" VerticalAlignment="Top" Width="75" Click="btnModificar_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"></Button>
+        <Button  Content="Limpiar" Height="23" HorizontalAlignment="Left" Margin="527,421,0,0" Name="btnClear" VerticalAlignment="Top" Width="75" Click="btnClear_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Operaciones Por Codigo" Height="28" HorizontalAlignment="Left" Margin="34,422,0,0" Name="label12" VerticalAlignment="Top" Width="164" FontFamily="Bookman Old Style" FontWeight="Bold" Foreground="White" />
+        <Button  Content="Salir" Height="23" HorizontalAlignment="Right" Margin="0,421,171,0" Name="btnSalir" VerticalAlignment="Top" Width="75" Click="btnSalir_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold" />
     </Grid>
 </Window>

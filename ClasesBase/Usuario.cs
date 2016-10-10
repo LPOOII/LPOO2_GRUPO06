@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace ClasesBase
 {
-    public class Usuario
+    public class Usuario : INotifyPropertyChanged
     {
         private int usr_Id;
 
@@ -76,7 +77,25 @@ namespace ClasesBase
             this.usr_Password = usr_Password;
             this.rol_Id = rol_Id;
         }
+
+        public Usuario(string usr_UserName, string usr_Password)
+        {
+            this.usr_UserName = usr_UserName;
+            this.usr_Password = usr_Password;
+            
+        }
+
        
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void Notificador(string prop)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            }
+        }
     }
 
 

@@ -2,16 +2,17 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Inicio" Height="500" Width="800" Foreground="White"
-        WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen">
+        WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" Icon="/Vistas;component/Resources/bares.png">
     <Window.Background>
-        <ImageBrush ImageSource="bg.jpg"/>
+        <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg" />
     </Window.Background>
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top" Width="Auto" Background="#8D8D8080" Foreground="White" FontWeight="DemiBold">
                 <MenuItem Header="_Articulos" Name="Articulos">
-                    <MenuItem Header="Panel de articulos" Foreground="Black" Click="Panel_articulos"/>
+                    
                     <MenuItem Header="ABM Articulos" Foreground="Black" Click="ABM"/>
+                    <MenuItem Header="Listado de Articulos" Foreground="Black" Click="Lista_articulos" />
                     <MenuItem Header="Panel de categoria" Foreground="Black" Click="Panel_categorias"/>
                     <MenuItem Header="_Familias" Foreground="Black" Click="Familias"/>
                     <MenuItem Header="_Unidades de medida" Foreground="Black" Click="Unidades_medida"/>

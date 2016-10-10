@@ -42,11 +42,7 @@ namespace Vistas
             
         }
 
-        private void Panel_articulos(object sender, RoutedEventArgs e)
-        {
-            Panel_articulos articulos = new Panel_articulos();
-            articulos.Show();
-        }
+        
 
         private void Panel_categorias(object sender, RoutedEventArgs e)
         {
@@ -82,6 +78,12 @@ namespace Vistas
         {
             abm_articulos abmArt = new abm_articulos();
             abmArt.Show();
+        }
+
+        private void Lista_articulos(object sender, RoutedEventArgs e)
+        {
+            ListadoDeArticulos listaArt = new ListadoDeArticulos();
+            listaArt.Show();
         }
 
     }

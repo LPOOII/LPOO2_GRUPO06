@@ -11,8 +11,20 @@ namespace ClasesBase
         private int art_Id;
         private string art_Descrip;
         private Familia fam_Id;
+
+        public Familia Fam_Id
+        {
+            get { return fam_Id; }
+            set { fam_Id = value; notifyChange("fam_Id"); }
+        }
         private Unidad_Medida um_Id;
-        private Categoria categoria;
+
+        public Unidad_Medida Um_Id
+        {
+            get { return um_Id; }
+            set { um_Id = value; notifyChange("um_Id");}
+        }
+        
         private decimal art_Costo;
         private decimal art_Margen_Beneficio;
         private decimal art_Precio;
@@ -22,44 +34,16 @@ namespace ClasesBase
         private decimal art_Stock_Actual;
         private Boolean art_Maneja_Stock;
 
-        public Categoria Categoria
-        {
-            get
-            {
-                return categoria;
-            }
-            set
-            {
-                categoria = value;
-                notifyChange("categoria");
-            }
-        }
+        //
+        private Categoria cat_Id;
 
-        public Unidad_Medida Unidad_Medida
+        public Categoria Cat_Id
         {
-            get
-            {
-                return um_Id;
-            }
-            set
-            {
-                um_Id = value;
-                notifyChange("um_Id");
-            }
+            get { return cat_Id; }
+            set { cat_Id = value; notifyChange("cat_Id"); }
         }
-
-        public Familia Familia
-        {
-            get
-            {
-                return fam_Id;
-            }
-            set
-            {
-                fam_Id = value;
-                notifyChange("fam_Id");
-            }
-        }
+        
+      
 
         public int Art_Id
         {
@@ -183,8 +167,10 @@ namespace ClasesBase
                          decimal art_Stock_Reposicion, decimal art_Stock_Actual, Boolean art_Maneja_Stock, string art_Descrip, decimal art_Stock_Max)
         {
             this.Art_Id = art_Id;
-            this.Familia = fam_Id;
-            this.Unidad_Medida = um_Id;
+            //this.Familia = fam_Id;
+            this.fam_Id = fam_Id;
+            //this.Unidad_Medida = um_Id;
+            this.um_Id = um_Id;
             this.Art_Costo = art_Costo;
             this.Art_Margen_Beneficio = art_Margen_Beneficio;
             this.Art_Precio = art_Precio;

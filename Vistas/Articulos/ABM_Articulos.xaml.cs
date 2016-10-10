@@ -56,6 +56,7 @@ namespace Vistas.Articulos
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
+            
             view.MoveCurrentToNext();
             if(view.IsCurrentAfterLast)
             {
@@ -63,6 +64,18 @@ namespace Vistas.Articulos
             }
         }
 
+        private void btnPanelOperaciones_Click(object sender, RoutedEventArgs e)
+        {
+            Panel_articulos oPanelArt = new Panel_articulos();
+            oPanelArt.Show();
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        
         
     }
 }

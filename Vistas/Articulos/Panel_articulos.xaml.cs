@@ -21,60 +21,22 @@ namespace Vistas
     /// </summary>
     public partial class Panel_articulos : Window
     {
+        ObservableCollection<Articulo> listaArticulo;
+
         public Panel_articulos()
         {
             InitializeComponent();
-            ObservableCollection<Articulo> listaArt = TrabajarArticulos.collectionArticulos();
+            
         }
 
-        
-        /// <summary>
-        /// metodo para cargar items en el datagridview
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void lista_articulos(object sender, RoutedEventArgs e)
-        {            
-            //var grid = sender as DataGrid;
-            //dataGridArticulos.ItemsSource = dt.DefaultView;
-        }
-
-        /// <summary>
-        /// metodo para cargar combo box de familias
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void load_familia(object sender, RoutedEventArgs e) 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            List<String> familias = new List<String>();
-            familias.Add("Selecciona un valor");
-            familias.Add("Materias primas");
-            familias.Add("Productos terminados");
-            familias.Add("Servicios");
-            var comboBox = sender as ComboBox;
-            comboBox.ItemsSource = familias;
-            comboBox.SelectedIndex = 0;
-        }
+            ObjectDataProvider odp = (ObjectDataProvider)this.Resources["LIST_ARTICLE"];
+            listaArticulo = odp.Data as ObservableCollection<Articulo>;
+            txtDeleteArt.Text = "";
 
-        /// <summary>
-        /// metodo para cargar combo box de unidades de medida
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void load_unidades(object sender, RoutedEventArgs e)
-        {
-            List<String> unidades = new List<String>();
-            unidades.Add("Selecciona un valor");
-            unidades.Add("Kilogramos");
-            unidades.Add("Gramos");
-            unidades.Add("Miligramos");
-            unidades.Add("Litros");
-            unidades.Add("Unidades");
-            unidades.Add("Docenas");
-            var comboBox = sender as ComboBox;
-            comboBox.ItemsSource = unidades;
-            comboBox.SelectedIndex = 0;
         }
+             
 
         /// <summary>
         /// metodo para guardar en el datagridview el articulo
@@ -83,36 +45,182 @@ namespace Vistas
         /// <param name="e"></param>
         private void guardarBtn_Click(object sender, RoutedEventArgs e)
         {
-            Articulo articulo = new Articulo();
-            articulo.Art_Id = 1;
-            articulo.Art_Descrip = descripcion.Text;
-            //articulo.Fam_Id = 1;
-            //articulo.Um_Id = 1;            
-            articulo.Art_Costo = Convert.ToInt32(costo.Text);
-            articulo.Art_Stock_Min = Convert.ToInt32(minimo.Text);
-            articulo.Art_Stock_Max = Convert.ToInt32(maximo.Text);
-            articulo.Art_Precio = Convert.ToInt32(precio.Text);
-            articulo.Art_Stock_Reposicion = Convert.ToInt32(reposicion.Text);
-            articulo.Art_Stock_Actual = Convert.ToInt32(actual.Text);
-            articulo.Art_Maneja_Stock = true;
-            articulo.Art_Margen_Beneficio = 10;
-            //ListaArticulos.Items.Add(articulo);
-            //dataGridArticulos.Items.Add(articulo);
-            MessageBox.Show(articulo.ToString());
-        }
-        
-        /// <summary>
-        /// Metodo para atrapar evento click sobre las filas de la tabla
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            var item = sender as ListViewItem;
-            if (item != null)
-            {                
-                // insertar algo                
+
+            if (MessageBox.Show("¿Agregar Articulo?", "Pregunta", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                Articulo articulo = new Articulo();
+                articulo.Art_Id = listaArticulo[listaArticulo.Count - 1].Art_Id + 1;
+                articulo.Art_Descrip = descripcion.Text;
+                Familia of = new Familia();
+                of.Fam_Descrip = cmbFamilia.SelectedValue.ToString();
+                articulo.Fam_Id = of;
+                Unidad_Medida um = new Unidad_Medida();
+                um.Um_Descrip = cmbUnidadMedida.SelectedValue.ToString();
+                articulo.Um_Id = um;
+                Categoria cat = new Categoria();
+                cat.Cat_Descrip = cmbCategoria.SelectedValue.ToString();
+                articulo.Cat_Id = cat;
+                articulo.Art_Costo = Convert.ToDecimal(costo.Text);
+                articulo.Art_Stock_Min = Convert.ToDecimal(minimo.Text);
+                articulo.Art_Stock_Max = Convert.ToDecimal(maximo.Text);
+                articulo.Art_Precio = Convert.ToDecimal(precio.Text);
+                articulo.Art_Stock_Reposicion = Convert.ToDecimal(reposicion.Text);
+                articulo.Art_Stock_Actual = Convert.ToDecimal(actual.Text);
+                articulo.Art_Margen_Beneficio = articulo.Art_Precio - articulo.Art_Stock_Actual;
+                if (radioSi.IsChecked == true)
+                {
+                    articulo.Art_Maneja_Stock = true;
+                }
+                else
+                {
+                    if (radioSi.IsChecked == false)
+                    {
+                        articulo.Art_Maneja_Stock = false;
+                    }
+                }
+
+                listaArticulo.Add(articulo);
             }
+            
+           
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("¿Eliminar Articulo?", "Pregunta", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                Articulo oArticle = null;
+                for (int i = 0; i < listaArticulo.Count; i++)
+                {
+                    if (listaArticulo[i].Art_Id == Convert.ToInt32(txtDeleteArt.Text))
+                    {
+                        oArticle = listaArticulo[i];
+                    }
+                }
+
+                if (oArticle != null)
+                {
+                    listaArticulo.Remove(oArticle);
+                }
+                else
+                {
+                    MessageBox.Show("El Elemento No Se Encuentra En La Lista ...");
+                }
+            
+            }
+            
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (MessageBox.Show("¿Modificar Articulo?", "Pregunta", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                Articulo articulo = new Articulo();
+                articulo.Art_Id = listaArticulo[encontrador].Art_Id;
+
+                articulo.Art_Descrip = descripcion.Text;
+                Familia of = new Familia();
+                of.Fam_Descrip = cmbFamilia.SelectedValue.ToString();
+                articulo.Fam_Id = of;
+                Unidad_Medida um = new Unidad_Medida();
+                um.Um_Descrip = cmbUnidadMedida.SelectedValue.ToString();
+                articulo.Um_Id = um;
+                Categoria cat = new Categoria();
+                cat.Cat_Descrip = cmbCategoria.SelectedValue.ToString();
+                articulo.Cat_Id = cat;
+                articulo.Art_Costo = Convert.ToDecimal(costo.Text);
+                articulo.Art_Stock_Min = Convert.ToDecimal(minimo.Text);
+                articulo.Art_Stock_Max = Convert.ToDecimal(maximo.Text);
+                articulo.Art_Precio = Convert.ToDecimal(precio.Text);
+                articulo.Art_Stock_Reposicion = Convert.ToDecimal(reposicion.Text);
+                articulo.Art_Stock_Actual = Convert.ToDecimal(actual.Text);
+                articulo.Art_Margen_Beneficio = articulo.Art_Precio - articulo.Art_Stock_Actual;
+                if (radioSi.IsChecked == true)
+                {
+                    articulo.Art_Maneja_Stock = true;
+                }
+                else
+                {
+                    if (radioSi.IsChecked == false)
+                    {
+                        articulo.Art_Maneja_Stock = false;
+                    }
+                }
+
+                listaArticulo[encontrador] = articulo;
+            }                    
+            
+                       
+        }
+        int encontrador = 0;
+        private void txtDeleteArt_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtDeleteArt.Text != "")
+            {
+                Articulo oArticle = null;
+                for (int i = 0; i < listaArticulo.Count; i++)
+                {
+                    if (txtDeleteArt.Text != null)
+                    {
+                        if (listaArticulo[i].Art_Id == Convert.ToInt32(txtDeleteArt.Text))
+                        {
+                            oArticle = listaArticulo[i];
+                            encontrador = i;
+                        }
+
+                    }
+                }
+
+                if (oArticle != null)
+                {
+                    descripcion.Text = oArticle.Art_Descrip;
+                    cmbFamilia.Text = oArticle.Fam_Id.Fam_Descrip;
+                    cmbCategoria.Text = oArticle.Cat_Id.Cat_Descrip;
+                    cmbUnidadMedida.Text = oArticle.Um_Id.Um_Descrip;
+                    costo.Text = oArticle.Art_Costo.ToString();
+                    minimo.Text = oArticle.Art_Stock_Min.ToString();
+                    maximo.Text = oArticle.Art_Stock_Max.ToString();
+                    precio.Text = oArticle.Art_Precio.ToString();
+                    reposicion.Text = oArticle.Art_Stock_Reposicion.ToString();
+                    actual.Text = oArticle.Art_Stock_Actual.ToString();
+
+                    oArticle = null;
+                   
+                }
+
+
+            }
+
+
+
+        }
+
+       
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            limpieza();
+        }
+
+        public void limpieza()
+        {
+
+            descripcion.Text = "";
+            cmbFamilia.Text = "";
+            cmbCategoria.Text = "";
+            cmbUnidadMedida.Text = "";
+            costo.Text = "";
+            minimo.Text = "";
+            maximo.Text = "";
+            precio.Text = "";
+            reposicion.Text = "";
+            actual.Text = "";
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
     }

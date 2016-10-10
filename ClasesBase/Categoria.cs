@@ -2,36 +2,49 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace ClasesBase
 {
-    public class Categoria
+    public class Categoria : INotifyPropertyChanged
     {
-        private int cat_id;
+        private int cat_Id;
 
-        public int Cat_id
+        public int Cat_Id
         {
-            get { return cat_id; }
-            set { cat_id = value; }
-        }
-        private String cat_descrip;
-
-        public String Cat_descrip
-        {
-            get { return cat_descrip; }
-            set { cat_descrip = value; }
+            get { return cat_Id; }
+            set { cat_Id = value; notifyChange(cat_Id.ToString()); }
         }
 
-        public Categoria(int cat_id, String cat_descrip)
+        private String cat_Descrip;
+
+        public String Cat_Descrip
         {
-            this.cat_descrip = cat_descrip;
-            this.cat_id = cat_id;
+            get { return cat_Descrip; }
+            set { cat_Descrip = value; notifyChange(cat_Descrip); }
+        }
+        public Categoria()
+        { }
+        public Categoria(int cat_Id, String cat_Descrip)
+        {
+            this.cat_Id = cat_Id;
+            this.cat_Descrip = cat_Descrip;            
         }
 
         public override string ToString()
         {
-            return "Categoria: " + Cat_id + "\n" +
-                "Descripcion: " + Cat_descrip;
+            return "Categoria: " + cat_Id + "\n" +
+                "Descripcion: " + cat_Descrip;
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void notifyChange(String property)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
         }
 
     }
