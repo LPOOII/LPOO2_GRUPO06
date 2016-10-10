@@ -75,6 +75,9 @@
     <Compile Include="Articulos\ABM_Articulos.xaml.cs">
       <DependentUpon>abm_articulos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Articulos\ArticulosVistaPrevia.xaml.cs">
+      <DependentUpon>ArticulosVistaPrevia.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Articulos\ListadoDeArticulos.xaml.cs">
       <DependentUpon>ListadoDeArticulos.xaml</DependentUpon>
     </Compile>
@@ -97,6 +100,10 @@
       <DependentUpon>Unidades_medida.xaml</DependentUpon>
     </Compile>
     <Page Include="Articulos\abm_articulos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Articulos\ArticulosVistaPrevia.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

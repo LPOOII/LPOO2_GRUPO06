@@ -1,0 +1,36 @@
+﻿<Window x:Class="Vistas.Articulos.ArticulosVistaPrevia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:data="clr-namespace:ClasesBase;assembly=ClasesBase"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        Title="ArticulosVistaPrevia" Height="413" Width="699" WindowStartupLocation="CenterScreen" Icon="/Vistas;component/Resources/bares.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg" />
+    </Window.Background>
+    <StackPanel Width="653" Height="332">
+        <FlowDocumentReader Height="299" Width="628">
+            <FlowDocument Name="DocMain">
+                <Paragraph FontFamily="Bookman Old Style" FontSize="25">Listado de Articulos</Paragraph>
+                <BlockUIContainer>
+                    <Grid>
+                        <ListView ItemsSource="{Binding}">
+                            <ListView.View>
+                                <GridView>
+                                    <GridView.Columns>
+                                        <GridViewColumn Header="Codigo" Width="55" DisplayMemberBinding="{Binding Art_Id}"/>
+                                        <GridViewColumn Header="Descripcion" Width="110" DisplayMemberBinding="{Binding Art_Descrip}" />
+                                        <GridViewColumn Header="Familia" Width="126" DisplayMemberBinding="{Binding Fam_Id.Fam_Descrip}" />
+                                        <GridViewColumn Header="Categoria" Width="100" DisplayMemberBinding="{Binding Cat_Id.Cat_Descrip}" />
+                                        <GridViewColumn Header="Unidad Medida" Width="120" DisplayMemberBinding="{Binding Um_Id.Um_Descrip}" />
+                                        <GridViewColumn Header="Costo" Width="100" DisplayMemberBinding="{Binding Art_Costo}" />
+                                    </GridView.Columns>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentReader>
+        <Button Content="Imprimir" Height="26" Name="btnImprimir" Width="191" Click="btnClick_Imprimir" FontWeight="Bold" />
+    </StackPanel>
+</Window>

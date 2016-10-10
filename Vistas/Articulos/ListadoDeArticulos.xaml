@@ -47,5 +47,6 @@
         </ListView>
         <Label Content="Categoria" Height="24" HorizontalAlignment="Left" Margin="189,22,0,0" Name="label1" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bookman Old Style" Width="74" FontStretch="Normal" FontStyle="Normal" Foreground="White"></Label>
         <Button Content="Salir" Height="23" HorizontalAlignment="Left" Margin="509,20,0,0" Name="btnSalir" VerticalAlignment="Top" Width="75" Click="btnSalir_Click" />
+        <Button Content="Vista Previa" Height="23" HorizontalAlignment="Left" Margin="428,20,0,0" Name="btnVista_Previa" VerticalAlignment="Top" Width="75" Click="btnVista_Previa_Click" />
     </Grid>
 </Window>

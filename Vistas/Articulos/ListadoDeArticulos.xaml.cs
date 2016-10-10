@@ -62,6 +62,14 @@ namespace Vistas.Articulos
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnVista_Previa_Click(object sender, RoutedEventArgs e)
+        {
+
+            ArticulosVistaPrevia frmArticuloVistaPrevia = new ArticulosVistaPrevia();
+            frmArticuloVistaPrevia.DataContext = ArticulosListadosf.ItemsSource;
+            frmArticuloVistaPrevia.ShowDialog();
         }        
 
     }
