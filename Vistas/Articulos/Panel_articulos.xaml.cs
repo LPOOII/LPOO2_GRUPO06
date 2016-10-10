@@ -101,6 +101,7 @@ namespace Vistas
                 if (oArticle != null)
                 {
                     listaArticulo.Remove(oArticle);
+                    limpieza();
                 }
                 else
                 {
