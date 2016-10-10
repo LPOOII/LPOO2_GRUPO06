@@ -8,8 +8,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         d:DesignHeight="747" d:DesignWidth="430" SizeToContent="WidthAndHeight"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize">    
-    <Window.Background>        
-        <ImageBrush ImageSource="../bg.jpg"/>        
+    <Window.Background>
+        <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg"/>        
     </Window.Background>
     <Window.Resources>
         <src:ConversorDeEstados x:Key="ConvEstados"></src:ConversorDeEstados>

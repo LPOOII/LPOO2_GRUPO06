@@ -5,7 +5,7 @@
         ResizeMode="NoResize"
         Title="Familias" Height="350" Width="400" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="../bg.jpg"/>
+        <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg"/>
     </Window.Background>
     <Grid>
         <Label Content="Descripcion" Foreground="White" FontWeight="DemiBold" Height="28" HorizontalAlignment="Left" Margin="27,50,0,0" Name="label1" VerticalAlignment="Top" />
