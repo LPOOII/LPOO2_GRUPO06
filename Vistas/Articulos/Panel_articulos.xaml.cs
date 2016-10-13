@@ -80,6 +80,7 @@ namespace Vistas
                 }
 
                 listaArticulo.Add(articulo);
+                limpieza();
             }
             
            
@@ -150,6 +151,7 @@ namespace Vistas
                 }
 
                 listaArticulo[encontrador] = articulo;
+                limpieza();
             }                    
             
                        
@@ -159,6 +161,7 @@ namespace Vistas
         {
             if (txtDeleteArt.Text != "")
             {
+                guardarBtn.IsEnabled = false;
                 Articulo oArticle = null;
                 for (int i = 0; i < listaArticulo.Count; i++)
                 {
@@ -187,10 +190,14 @@ namespace Vistas
                     actual.Text = oArticle.Art_Stock_Actual.ToString();
 
                     oArticle = null;
-                   
+
                 }
 
 
+            }
+            else
+            {
+                guardarBtn.IsEnabled = true;
             }
 
 
@@ -217,6 +224,7 @@ namespace Vistas
             precio.Text = "";
             reposicion.Text = "";
             actual.Text = "";
+            txtDeleteArt.Text = "";
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
