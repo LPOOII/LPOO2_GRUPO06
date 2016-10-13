@@ -48,6 +48,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="ConversorDeEstados.cs" />
     <Compile Include="Factura.cs" />
+    <Compile Include="Gen.cs" />
     <Compile Include="Items_Factura.cs" />
     <Compile Include="Items_Orden_Compra.cs" />
     <Compile Include="Items_Pedido.cs" />
