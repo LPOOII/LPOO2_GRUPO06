@@ -20,6 +20,7 @@
                 <MenuItem Header="_Ventas">
                     <MenuItem Header="Panel de clientes" Foreground="Black" Click="Panel_clientes"/>
                     <MenuItem Header="Mesas" Foreground="Black" Click="Mesas"/>
+                    <MenuItem Header="Pedidos" Foreground="Black" Click="Panel_Pedidos"/>
                 </MenuItem>
                 <MenuItem Header="_Usuarios" Name="Usuarios">
                     <MenuItem Header="Panel de usuarios" Foreground="Black"/>

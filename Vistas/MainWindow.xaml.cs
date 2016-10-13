@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Vistas.Articulos;
-
+using Vistas.Ventas;
 namespace Vistas
 {
     /// <summary>
@@ -85,6 +85,14 @@ namespace Vistas
             ListadoDeArticulos listaArt = new ListadoDeArticulos();
             listaArt.Show();
         }
+
+        private void Panel_Pedidos(object sender, RoutedEventArgs e)
+        {
+            Pedidos oOrder = new Pedidos();
+            oOrder.Show();
+        }
+
+        
 
     }
 }
