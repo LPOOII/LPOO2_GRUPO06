@@ -21,11 +21,11 @@
                             ObjectType="{x:Type data:TrabajarArticulos}" 
                             MethodName="collectionCategorias">
         </ObjectDataProvider>
-        <CollectionViewSource x:Key="VISTA_CATEGORY" Source="{StaticResource ResourceKey=LIST_CATEGORY}" />
+        
     </Window.Resources>
     <Grid Width="596" >
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="277,21,0,0" Name="cmbCategoria" VerticalAlignment="Top" Width="136"
-                  ItemsSource="{Binding Source={StaticResource VISTA_CATEGORY}}" 
+                  ItemsSource="{Binding Source={StaticResource LIST_CATEGORY}}" 
                   DisplayMemberPath="Cat_Descrip"  
                   SelectedValuePath="Cat_Id"       
                   SelectionChanged="cmbCategoria_SelectionChanged"/>
