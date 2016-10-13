@@ -1,0 +1,42 @@
+﻿<Window x:Class="Vistas.Ventas.Pedidos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:data="clr-namespace:ClasesBase;assembly=ClasesBase"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        Title="Pedidos" Height="295" Width="524" WindowStartupLocation="CenterScreen" Icon="/Vistas;component/Resources/bares.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg" />
+    </Window.Background>
+    <Window.Resources>
+        
+        <ObjectDataProvider x:Key="LIST_ARTICLE" 
+                            ObjectType="{x:Type data:TrabajarArticulos}" 
+                            MethodName="collectionArticulos">
+        </ObjectDataProvider>
+    </Window.Resources>
+    <Grid>
+        <Label Style="{StaticResource label_articulo}"  Content="Fecha y Hora" Height="28" HorizontalAlignment="Left" Margin="37,38,0,0" Name="label1" VerticalAlignment="Top" Width="90" Foreground="White" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="133,39,0,0" Name="dpFecha" VerticalAlignment="Top" Width="115" />
+        <Label Content="Descripcion" Height="28" HorizontalAlignment="Left" Margin="40,124,0,0" Name="label2" Style="{StaticResource label_articulo}" VerticalAlignment="Top" />
+        <Label Content="Cliente" Height="28" HorizontalAlignment="Left" Margin="40,93,0,0" Name="label10" Style="{StaticResource label_articulo}" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="133,97,0,0" Name="txtCliente" Style="{DynamicResource txt_articulo}" VerticalAlignment="Top" Width="120" />
+        <ComboBox DisplayMemberPath="Art_Descrip" Height="23" HorizontalAlignment="Right"
+                  ItemsSource="{Binding Source={StaticResource LIST_ARTICLE}}" 
+                  Margin="0,126,257,0" Name="cmbArticle" SelectedValuePath="Art_Descrip"
+                  VerticalAlignment="Top" Width="120" />
+        <Label Style="{StaticResource label_articulo}" Content="Nro de Mesa" Height="28" HorizontalAlignment="Left" Margin="40,69,0,0" Name="label3" VerticalAlignment="Top" />
+        <TextBox Style="{DynamicResource txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="133,69,0,0" Name="txtNroMesa" VerticalAlignment="Top" Width="120" />
+        <Label Style="{StaticResource label_articulo}"  Content="Cantidad" Height="28" HorizontalAlignment="Left" Margin="40,154,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Style="{DynamicResource txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="133,154,0,0" Name="txtCantidad" VerticalAlignment="Top" Width="120" />
+        <Button Content="Agregar Pedido" Height="23" HorizontalAlignment="Left" Margin="133,198,0,0" Name="button1" VerticalAlignment="Top" Width="120" Click="Agregar_Pedido" />
+        <ListView  x:Name="listView" Height="138" HorizontalAlignment="Left" Margin="278,39,0,0"  VerticalAlignment="Top" Width="212">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Cantidad" Width="54" DisplayMemberBinding="{Binding Cant}"/>
+                    <GridViewColumn Header="Descripcion" Width="152" DisplayMemberBinding="{Binding Descrip}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Confirmar" Height="23" HorizontalAlignment="Left" Margin="278,197,0,0" Name="btnConfirmarPedido" VerticalAlignment="Top" Width="120" Click="btnConfirmarPedido_Click" />
+    </Grid>
+</Window>
