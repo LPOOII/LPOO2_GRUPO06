@@ -99,6 +99,12 @@
     <Compile Include="Articulos\Unidades_medida.xaml.cs">
       <DependentUpon>Unidades_medida.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventas\Pedidos.xaml.cs">
+      <DependentUpon>Pedidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\VistaPreviaPedidoImpresion.xaml.cs">
+      <DependentUpon>VistaPreviaPedidoImpresion.xaml</DependentUpon>
+    </Compile>
     <Page Include="Articulos\abm_articulos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -173,6 +179,14 @@
     <Page Include="Articulos\Unidades_medida.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventas\Pedidos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ventas\VistaPreviaPedidoImpresion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
