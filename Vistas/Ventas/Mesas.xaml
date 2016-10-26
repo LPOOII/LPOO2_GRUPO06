@@ -6,7 +6,7 @@
         xmlns:src="clr-namespace:ClasesBase;assembly=ClasesBase"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        d:DesignHeight="837" d:DesignWidth="430" SizeToContent="WidthAndHeight"
+        d:DesignHeight="510" d:DesignWidth="430" SizeToContent="WidthAndHeight"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize">    
     <Window.Background>
         <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg"/>        
@@ -15,15 +15,16 @@
         <src:ConversorDeEstados x:Key="ConvEstados"></src:ConversorDeEstados>
         <XmlDataProvider x:Key="tipo_estado" Source="EstadosMesa.xml" XPath="/estados" />
     </Window.Resources>
-    <Grid Height="637" Width="430">
-        <mesa:MesaControl Margin="24,-37,44,249"></mesa:MesaControl>
+    <Grid Height="578" Width="430">       
+        
+        <mesa:MesaControl Margin="24,12,44,200"></mesa:MesaControl>
         <Button Content="Salir"  Style="{StaticResource ResourceKey=btn_mesa}" Margin="310,388,0,0" Name="btnSalir" Click="salir"/>
       
         <ListBox 
 	            ItemsSource="{Binding Source={StaticResource tipo_estado},XPath=tipo}" 
 	            ScrollViewer.HorizontalScrollBarVisibility="Disabled"  
 	            ScrollViewer.VerticalScrollBarVisibility="Disabled" 
-	            Height="auto" HorizontalAlignment="Left" Margin="154,389,0,0" Name="cmbTipoEstado" VerticalAlignment="Top" Width="150">
+	            Height="61" HorizontalAlignment="Left" Margin="154,389,0,0" Name="cmbTipoEstado" VerticalAlignment="Top" Width="150">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding XPath=@name}" Background="{Binding XPath=@name,Converter={StaticResource ConvEstados}}" FontSize="13" Padding="10,4,150,4" TextAlignment="Center" />

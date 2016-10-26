@@ -4,27 +4,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="345" d:DesignWidth="363">
+             d:DesignHeight="368" d:DesignWidth="363">
+    
     <Grid Height="345" Width="363">
-        <Button Content="1" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,10,0,0" Name="btn1" Click="mouseClickEvent"/>
-        <Button Content="5" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,82,0,0" Name="btn5" Click="mouseClickEvent"/>
-        <Button Content="9" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,149,0,0" Name="btn9" Click="mouseClickEvent"/>
-        <Button Content="13" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,220,0,0" Name="btn13" Click="mouseClickEvent"/>
-        <Button Content="17" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,285,0,0" Name="btn17" Click="mouseClickEvent"/>
-        <Button Content="2" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,10,0,0" Name="btn2" Click="mouseClickEvent"/>
-        <Button Content="6" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,82,0,0" Name="btn6" Click="mouseClickEvent"/>
-        <Button Content="10" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,149,0,0" Name="btn10" Click="mouseClickEvent"/>
-        <Button Content="14" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,220,0,0" Name="btn14" Click="mouseClickEvent"/>
-        <Button Content="18" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,285,0,0" Name="btn18" Click="mouseClickEvent"/>
-        <Button Content="3" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,10,0,0" Name="btn3" Click="mouseClickEvent"/>
-        <Button Content="7" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,82,0,0" Name="btn7" Click="mouseClickEvent"/>
-        <Button Content="11" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,149,0,0" Name="btn11" Click="mouseClickEvent"/>
-        <Button Content="19" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,285,0,0" Name="btn19" Click="mouseClickEvent"/>
-        <Button Content="4" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,10,0,0" Name="btn4" Click="mouseClickEvent"/>
-        <Button Content="8" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,82,0,0" Name="btn8" Click="mouseClickEvent"/>
-        <Button Content="12" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,149,0,0" Name="btn12" Click="mouseClickEvent"/>
-        <Button Content="15" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,220,0,0" Name="btn15" Click="mouseClickEvent"/>
-        <Button Content="16" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,220,0,0" Name="btn16" Click="mouseClickEvent"/>
-        <Button Content="20" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,285,0,0" Name="btn20" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="1" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,10,0,0" Name="btn1" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="5" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,82,0,0" Name="btn5" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="9" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,149,0,0" Name="btn9" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="13" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,220,0,0" Name="btn13" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="17" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="10,285,0,0" Name="btn17" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="2" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,10,0,0" Name="btn2" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="6" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,82,0,0" Name="btn6" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="10" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,149,0,0" Name="btn10" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="14" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,220,0,0" Name="btn14" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="18" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="99,285,0,0" Name="btn18" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="3" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,10,0,0" Name="btn3" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="7" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,82,0,0" Name="btn7" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="11" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,149,0,0" Name="btn11" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="19" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,285,0,0" Name="btn19" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="4" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,10,0,0" Name="btn4" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="8" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,82,0,0" Name="btn8" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="12" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,149,0,0" Name="btn12" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="15" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="196,220,0,0" Name="btn15" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="16" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,220,0,0" Name="btn16" Click="mouseClickEvent"/>
+        <Button ContentStringFormat="20" Template="{StaticResource ResourceKey=templateTb}" Style="{StaticResource ResourceKey=btn_mesa}" Margin="286,285,0,0" Name="btn20" Click="mouseClickEvent"/>
     </Grid>
 </UserControl>
