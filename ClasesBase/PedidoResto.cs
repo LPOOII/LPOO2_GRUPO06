@@ -63,5 +63,8 @@ namespace ClasesBase
             get { return ped_facturado; }
             set { ped_facturado = value; }
         }
+        public PedidoResto()
+        {}
+
     }
 }
