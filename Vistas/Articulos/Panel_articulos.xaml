@@ -5,7 +5,7 @@
         xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
         WindowStyle="SingleBorderWindow"
         ResizeMode="NoResize"
-        Title="Panel articulos" Height="542" Width="884" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="Panel articulos" Height="607" Width="884" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Window.Background>
         <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg"/>
     </Window.Background>
@@ -31,7 +31,7 @@
                             MethodName="collectionCategoria">
         </ObjectDataProvider>
     </Window.Resources>
-    <Grid Height="459">
+    <Grid Height="623">
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Familia" Height="28" HorizontalAlignment="Left" Margin="29,59,0,0" Name="label1" VerticalAlignment="Top" />
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Unidad de medida" Height="28" HorizontalAlignment="Left" Margin="29,117,0,0" Name="label2" VerticalAlignment="Top" />
         <Label Style="{StaticResource ResourceKey=label_articulo}" Content="Costo"  Height="28" HorizontalAlignment="Left" Margin="29,149,0,0" Name="label3" VerticalAlignment="Top" />
@@ -54,24 +54,27 @@
         <RadioButton Content="Si" Foreground="White" FontWeight="DemiBold" Height="16" HorizontalAlignment="Left" Margin="177,358,0,0" Name="radioSi" VerticalAlignment="Top" />
         <RadioButton Content="No" FontWeight="DemiBold" Foreground="White" Height="16" HorizontalAlignment="Left" Margin="228,358,0,0" Name="radioNo" VerticalAlignment="Top" />
         
+        <!--COMBOBOX DATOS FAMILIA-->
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,61,0,0" Name="cmbFamilia" 
                    VerticalAlignment="Top" Width="120"
                   ItemsSource="{Binding Source={StaticResource LIST_FAMILY}}" 
                   DisplayMemberPath="Fam_Descrip"  
-                  SelectedValuePath="Fam_Descrip"       />
+                  SelectedValuePath="Fam_Id"/>
+
+        <!--COMBOBOX DATOS UNIDAD MEDIDA-->
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,119,0,0" Name="cmbUnidadMedida" 
                   VerticalAlignment="Top" Width="120" 
                    ItemsSource="{Binding Source={StaticResource LIST_UNIT}}" 
                   DisplayMemberPath="Um_Descrip"  
-                  SelectedValuePath="Um_Descrip"/>
+                  SelectedValuePath="Um_Id"/>
         
         <Button Style="{StaticResource ResourceKey=btn_mouse_over}"
                 Content="Guardar" Height="23" HorizontalAlignment="Left"
-                Margin="204,380,0,0" Name="guardarBtn" VerticalAlignment="Top"
+                Margin="209,455,0,0" Name="guardarBtn" VerticalAlignment="Top"
                 Width="75" Click="guardarBtn_Click" />
 
         <ListView ItemsSource="{Binding Source={StaticResource VISTA_ARTICLE}}"
-                  x:Name="ArticulosListadosf" Margin="290,28,12,85"  IsSynchronizedWithCurrentItem="True">
+                  x:Name="ArticulosListadosf" Margin="290,28,12,414"  IsSynchronizedWithCurrentItem="True">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
@@ -81,21 +84,31 @@
                         <GridViewColumn Header="Categoria" Width="100" DisplayMemberBinding="{Binding Cat_Id.Cat_Descrip}" />
                         <GridViewColumn Header="Unidad Medida" Width="100" DisplayMemberBinding="{Binding Um_Id.Um_Descrip}" />
                         <GridViewColumn Header="Costo" Width="90" DisplayMemberBinding="{Binding Art_Costo}" />
+                        <GridViewColumn Header="Imagen" Width="90" DisplayMemberBinding="{Binding Art_Img}" />
                     </GridView.Columns>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label Content="Categoria" Height="28" HorizontalAlignment="Left" Margin="29,90,0,0" Name="label4" Style="{StaticResource label_articulo}" VerticalAlignment="Top" />
+
+        <!--COMBOBOX DATOS CATEGORIA-->
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="164,90,0,0" Name="cmbCategoria"
                   VerticalAlignment="Top" Width="120"
                   ItemsSource="{Binding Source={StaticResource LIST_CATEGORY}}" 
                   DisplayMemberPath="Cat_Descrip"  
-                  SelectedValuePath="Cat_Descrip"/>
-        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="204,422,0,0" Name="txtDeleteArt" VerticalAlignment="Top" Width="120" TextChanged="txtDeleteArt_TextChanged" />
-        <Button  Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="437,421,0,0" Name="btnEliminar" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"/>
-        <Button  Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="350,421,0,0" Name="btnModificar" VerticalAlignment="Top" Width="75" Click="btnModificar_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"></Button>
-        <Button  Content="Limpiar" Height="23" HorizontalAlignment="Left" Margin="527,421,0,0" Name="btnClear" VerticalAlignment="Top" Width="75" Click="btnClear_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"/>
-        <Label Content="Operaciones Por Codigo" Height="28" HorizontalAlignment="Left" Margin="34,422,0,0" Name="label12" VerticalAlignment="Top" Width="164" FontFamily="Bookman Old Style" FontWeight="Bold" Foreground="White" />
-        <Button  Content="Salir" Height="23" HorizontalAlignment="Right" Margin="0,421,171,0" Name="btnSalir" VerticalAlignment="Top" Width="75" Click="btnSalir_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold" />
+                  SelectedValuePath="Cat_Id"/>
+        <TextBox Style="{DynamicResource ResourceKey=txt_articulo}" Height="23" HorizontalAlignment="Left" Margin="204,534,0,0" Name="txtDeleteArt" VerticalAlignment="Top" Width="120" TextChanged="txtDeleteArt_TextChanged" />
+        <Button  Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="441,534,0,0" Name="btnEliminar" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"/>
+        <Button  Content="Modificar" Height="23" HorizontalAlignment="Left" Margin="350,533,0,0" Name="btnModificar" VerticalAlignment="Top" Width="75" Click="btnModificar_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"></Button>
+        <Button  Content="Limpiar" Height="23" HorizontalAlignment="Left" Margin="532,534,0,0" Name="btnClear" VerticalAlignment="Top" Width="75" Click="btnClear_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Operaciones Por Codigo" Height="28" HorizontalAlignment="Left" Margin="34,534,0,0" Name="label12" VerticalAlignment="Top" Width="164" FontFamily="Bookman Old Style" FontWeight="Bold" Foreground="White" />
+        <Button  Content="Salir" Height="23" HorizontalAlignment="Right" Margin="0,533,163,0" Name="btnSalir" VerticalAlignment="Top" Width="75" Click="btnSalir_Click" Background="#FF90861C" Foreground="White" FontWeight="Bold" />
+        <Label Content="Imagen" Height="28" HorizontalAlignment="Left" Margin="30,387,0,0" Name="label13" Style="{StaticResource label_articulo}" VerticalAlignment="Top" />
+        <Button Content=". . ." Height="28" HorizontalAlignment="Left" Margin="164,386,0,0" Name="btnimg" VerticalAlignment="Top" Width="34" Click="btnimg_Click" />
+        <TextBox Height="29" HorizontalAlignment="Left" Margin="199,386,0,0" Name="url" VerticalAlignment="Top" Width="85" />
+
+        <Image Name="imgArticulo"  Canvas.Left="316" Canvas.Top="60" Stretch="Fill" Margin="312,226,23,116" />
+
+
     </Grid>
 </Window>

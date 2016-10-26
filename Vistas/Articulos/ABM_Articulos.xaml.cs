@@ -33,16 +33,19 @@ namespace Vistas.Articulos
             listaArt = odp.Data as ObservableCollection<Articulo>;
 
             view = (CollectionView)CollectionViewSource.GetDefaultView(canvas_container.DataContext);
+            sldNavegador.Maximum = view.Count - 1;
         }
 
         private void btnFirst_Click(object sender, RoutedEventArgs e)
         {
             view.MoveCurrentToFirst();
+            sldNavegador.Value = view.CurrentPosition;
         }
 
         private void btnLast_Click(object sender, RoutedEventArgs e)
         {
             view.MoveCurrentToLast();
+            sldNavegador.Value = view.CurrentPosition;
         }
 
         private void btnPrevious_Click(object sender, RoutedEventArgs e)
@@ -52,6 +55,7 @@ namespace Vistas.Articulos
             {
                 view.MoveCurrentToLast();
             }
+            sldNavegador.Value = view.CurrentPosition;
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
@@ -62,6 +66,7 @@ namespace Vistas.Articulos
             {
                 view.MoveCurrentToFirst();
             }
+            sldNavegador.Value = view.CurrentPosition;
         }
 
         private void btnPanelOperaciones_Click(object sender, RoutedEventArgs e)
@@ -73,6 +78,12 @@ namespace Vistas.Articulos
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void sldNavegador_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(canvas_container.DataContext);
+           view.MoveCurrentToPosition((int)sldNavegador.Value);
         }
 
         

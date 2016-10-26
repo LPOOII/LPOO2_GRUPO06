@@ -8,6 +8,8 @@
         <ImageBrush ImageSource="/Vistas;component/Resources/bg.jpg"/>
     </Window.Background>
     <Window.Resources>
+
+        <!--DATOS LISTA ARTICULO-->
         <ObjectDataProvider x:Key="LIST_ARTICLE" 
                             ObjectType="{x:Type data:TrabajarArticulos}" 
                             MethodName="collectionArticulos"> 
@@ -17,15 +19,19 @@
                 <scm:SortDescription PropertyName="Art_Descrip" Direction="Ascending"></scm:SortDescription>
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
+
+        <!--DATOS COMBOBOX CATEGORIA-->
         <ObjectDataProvider x:Key="LIST_CATEGORY" 
                             ObjectType="{x:Type data:TrabajarArticulos}" 
                             MethodName="collectionCategorias">
         </ObjectDataProvider>
-        
+        <CollectionViewSource x:Key="VISTA_CATEGORY" Source="{StaticResource ResourceKey=LIST_CATEGORY}" />
     </Window.Resources>
     <Grid Width="596" >
+
+        <!--COMBOBOX-->
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="277,21,0,0" Name="cmbCategoria" VerticalAlignment="Top" Width="136"
-                  ItemsSource="{Binding Source={StaticResource LIST_CATEGORY}}" 
+                  ItemsSource="{Binding Source={StaticResource VISTA_CATEGORY}}" 
                   DisplayMemberPath="Cat_Descrip"  
                   SelectedValuePath="Cat_Id"       
                   SelectionChanged="cmbCategoria_SelectionChanged"/>

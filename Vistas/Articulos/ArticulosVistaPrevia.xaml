@@ -31,6 +31,15 @@
                 </BlockUIContainer>
             </FlowDocument>
         </FlowDocumentReader>
-        <Button Content="Imprimir" Height="26" Name="btnImprimir" Width="191" Click="btnClick_Imprimir" FontWeight="Bold" />
+        <Button Height="26" Name="btnImprimir" Width="191" Click="btnClick_Imprimir" FontWeight="Bold">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold">Impresión</TextBlock>                        
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+            <Image Name="btnPrint" Source="/Vistas;component/Resources/impresion.jpg"></Image>
+        </Button>
     </StackPanel>
 </Window>

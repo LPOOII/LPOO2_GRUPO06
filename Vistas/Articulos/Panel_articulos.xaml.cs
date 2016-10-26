@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using ClasesBase;
 using System.Data;
 using System.Collections.ObjectModel;
+using Microsoft.Win32;
 
 namespace Vistas
 {
@@ -52,13 +53,13 @@ namespace Vistas
                 articulo.Art_Id = listaArticulo[listaArticulo.Count - 1].Art_Id + 1;
                 articulo.Art_Descrip = descripcion.Text;
                 Familia of = new Familia();
-                of.Fam_Descrip = cmbFamilia.SelectedValue.ToString();
+                of.Fam_Id = (int)cmbFamilia.SelectedValue;
                 articulo.Fam_Id = of;
                 Unidad_Medida um = new Unidad_Medida();
-                um.Um_Descrip = cmbUnidadMedida.SelectedValue.ToString();
+                um.Um_Id = (int)cmbUnidadMedida.SelectedValue;
                 articulo.Um_Id = um;
                 Categoria cat = new Categoria();
-                cat.Cat_Descrip = cmbCategoria.SelectedValue.ToString();
+                cat.Cat_Id = (int)cmbCategoria.SelectedValue;
                 articulo.Cat_Id = cat;
                 articulo.Art_Costo = Convert.ToDecimal(costo.Text);
                 articulo.Art_Stock_Min = Convert.ToDecimal(minimo.Text);
@@ -67,6 +68,7 @@ namespace Vistas
                 articulo.Art_Stock_Reposicion = Convert.ToDecimal(reposicion.Text);
                 articulo.Art_Stock_Actual = Convert.ToDecimal(actual.Text);
                 articulo.Art_Margen_Beneficio = articulo.Art_Precio - articulo.Art_Stock_Actual;
+                articulo.Art_Img = url.Text;
                 if (radioSi.IsChecked == true)
                 {
                     articulo.Art_Maneja_Stock = true;
@@ -78,9 +80,10 @@ namespace Vistas
                         articulo.Art_Maneja_Stock = false;
                     }
                 }
+                ArticuloModel.insert_Articulo(articulo);
+                ObservableCollection<Articulo> obCol = TrabajarArticulos.collectionArticulos();
+                ArticulosListadosf.ItemsSource = TrabajarArticulos.collectionArticulos();
 
-                listaArticulo.Add(articulo);
-                limpieza();
             }
             
            
@@ -151,7 +154,6 @@ namespace Vistas
                 }
 
                 listaArticulo[encontrador] = articulo;
-                limpieza();
             }                    
             
                        
@@ -161,7 +163,6 @@ namespace Vistas
         {
             if (txtDeleteArt.Text != "")
             {
-                guardarBtn.IsEnabled = false;
                 Articulo oArticle = null;
                 for (int i = 0; i < listaArticulo.Count; i++)
                 {
@@ -190,14 +191,10 @@ namespace Vistas
                     actual.Text = oArticle.Art_Stock_Actual.ToString();
 
                     oArticle = null;
-
+                   
                 }
 
 
-            }
-            else
-            {
-                guardarBtn.IsEnabled = true;
             }
 
 
@@ -224,12 +221,49 @@ namespace Vistas
             precio.Text = "";
             reposicion.Text = "";
             actual.Text = "";
-            txtDeleteArt.Text = "";
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnimg_Click(object sender, RoutedEventArgs e)
+        {
+           
+            OpenFileDialog file = new OpenFileDialog();
+            file.DefaultExt = ".jpg";
+            file.Filter = "Image files (.jpg)|*.jpg";
+            if (file.ShowDialog() == true)
+            {
+                url.Text = file.FileName.ToString();
+                cargarImagen(url.Text);
+            }
+
+        }
+
+        private void cargarImagen(string direccion)
+        {
+            try
+            {
+                BitmapImage auto = new BitmapImage();
+                auto.BeginInit();
+                auto.UriSource = new Uri(direccion);
+                auto.EndInit();
+
+                imgArticulo.Source = auto;
+            }
+            catch (Exception)
+            {
+                BitmapImage auto = new BitmapImage();
+                auto.BeginInit();
+                auto.UriSource = new Uri("../img/imagen-no-encontrada.jpg", UriKind.Relative);
+                auto.EndInit();
+
+                imgArticulo.Source = auto;
+
+            }
+
         }
 
     }

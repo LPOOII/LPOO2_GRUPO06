@@ -17,12 +17,12 @@
          
     <Canvas Name="canvas_container"
             DataContext="{Binding Source={StaticResource ResourceKey=LISTA_ARTICULOS}}" Loaded="Window_Loaded">
-        <StackPanel Orientation="Horizontal" Canvas.Left="65" Canvas.Top="28" Width="450">
+        <StackPanel Orientation="Horizontal" Canvas.Left="65" Canvas.Top="28" Width="450">            
             <Button Name="btnFirst" Content="|&lt;" Margin="0 0 110 0" Canvas.Top="32" Width="30" Click="btnFirst_Click"></Button>
             <Button Name="btnPrevious" Content="&lt;" Margin="0 0 110 0" Canvas.Top="32" Width="30" Click="btnPrevious_Click"></Button>
             <Button Name="btnNext" Content="&gt;" Margin="0 0 110 0" Canvas.Top="32" Width="30" Click="btnNext_Click"></Button>
             <Button Name="btnLast" Content="&gt;|" Margin="0 0 60 0" Canvas.Top="32" Width="30" Click="btnLast_Click"></Button>
-        </StackPanel>
+        </StackPanel>        
         <Label Canvas.Left="84" Canvas.Top="68" Content="ID" Height="28" Name="label1" FontWeight="Normal" Foreground="White" />
         <Label Canvas.Left="32" Canvas.Top="102" Content="Descripcion" Height="28" Name="label2" FontWeight="Normal" Foreground="White" />
         <Label Canvas.Left="65" Canvas.Top="135" Content="Costo" Height="28" Name="label3" FontWeight="Normal" Foreground="White" />
@@ -58,10 +58,28 @@
         <TextBox Canvas.Left="398" Canvas.Top="209" Height="23" Name="textBox3" Text="{Binding Um_Id.Um_Id}" Width="128" />
         <TextBox Canvas.Left="398" Canvas.Top="243" Height="23" Name="textBox4" Text="{Binding Um_Id.Um_Descrip}" Width="128" />
         <TextBox Canvas.Left="398" Canvas.Top="279" Height="23" Name="textBox5" Text="{Binding Um_Id.Um_Abrev}" Width="128" />
-        <Button Canvas.Left="141" Canvas.Top="362" Content="Operaciónes --> |Nuevo| |Modificar| |Eliminar|" Height="42" Name="btnPanelOperaciones" Width="298" FontWeight="Bold" FontStyle="Italic" Background="#FF7BC4B2" Click="btnPanelOperaciones_Click" />
+        <Button Canvas.Left="141" Canvas.Top="362" Content="Operaciónes --> |Nuevo| |Modificar| |Eliminar|" Height="42" Name="btnPanelOperaciones" Width="298" FontWeight="Bold" FontStyle="Italic" Background="#FF7BC4B2" Click="btnPanelOperaciones_Click">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold">Nuevo-Modificar-Eliminar</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>            
+        </Button>
         <Label Canvas.Left="299" Canvas.Top="310" Content="Categoria" Height="28" Name="label16" Foreground="White" Width="76" />
         <TextBox Canvas.Left="398" Canvas.Top="311" Height="23" Name="txtCategoria" Text="{Binding Cat_Id.Cat_Descrip}" Width="128" />
-        <Button Canvas.Left="451" Canvas.Top="372" Content="Salir" Height="23" Name="btnSalir" Width="75" Click="btnSalir_Click" />
+        <Button Canvas.Left="451" Canvas.Top="372"  Height="23" Name="btnSalir" Width="75" Click="btnSalir_Click">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold">Salir</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+            <Image Name="btnPrint" Source="/Vistas;component/images/imgSalir.ico"></Image>
+        </Button>
+        <Slider Name="sldNavegador" Canvas.Left="63" Canvas.Top="2" Height="20" Width="458" Orientation="Horizontal" ValueChanged="sldNavegador_ValueChanged" />
     </Canvas>
     
     
