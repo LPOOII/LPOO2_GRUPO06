@@ -31,6 +31,7 @@ namespace ClasesBase
             return dt;
        }
 
+        //ObservableCollection que es una implementación integrada de una recolección de datos que expone la interfase INotifyCollectionChanged
         public static ObservableCollection<Articulo> collectionArticulos()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
@@ -43,7 +44,7 @@ namespace ClasesBase
             ObservableCollection<Articulo> obCol = new ObservableCollection<Articulo>();
             DataTable dt = new DataTable();
             da.Fill(dt);
-
+            //recorremos las filas dt
             foreach (DataRow row in dt.Rows)
             {
                 

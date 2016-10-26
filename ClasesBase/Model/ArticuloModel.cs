@@ -60,12 +60,34 @@ namespace ClasesBase
         public static void insert_Articulo(Articulo article) {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.conexion);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"INSERT INTO Articulo(art_descrip, art_costo, 
-                                                     art_margen_beneficio, art_precio, 
-                                                     art_stock_min, art_stock_max, art_stock_reposicion,
-                                                     art_stock_actual, art_maneja_stock, fam_id, um_id)
-                                values(@descrip, @costo, @margBen, @precio, @stkmin, 
-                                       @stkmax, @stkrep, @stkactual, @manjstk, @fam, @unMed)";
+            cmd.CommandText = @"INSERT INTO Articulo(
+                art_descrip, 
+                art_costo, 
+                art_margen_beneficio,
+                art_precio, 
+                art_stock_min,
+                art_stock_max, 
+                art_stock_reposicion,
+                art_stock_actual, 
+                art_maneja_stock, 
+                fam_id,
+                um_id,
+                cat_id,
+                art_img)
+                values(
+                @descrip,
+                @costo,
+                @margBen,
+                @precio,
+                @stkmin, 
+                @stkmax, 
+                @stkrep,
+                @stkactual, 
+                @manjstk,
+                @fam,
+                @unMed,
+                @catId,
+                @art_img)";
             
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
@@ -79,9 +101,10 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@stkrep", article.Art_Stock_Reposicion);
             cmd.Parameters.AddWithValue("@stkactual", article.Art_Stock_Actual);
             cmd.Parameters.AddWithValue("@manjstk", article.Art_Maneja_Stock);
-            // comentado para trabajar en el tp3
-            //cmd.Parameters.AddWithValue("@fam", article.Fam_Id);
-            //cmd.Parameters.AddWithValue("@unMed", article.Um_Id);
+            cmd.Parameters.AddWithValue("@fam", article.Fam_Id.Fam_Id);
+            cmd.Parameters.AddWithValue("@unMed", article.Um_Id.Um_Id);
+            cmd.Parameters.AddWithValue("@catId", article.Cat_Id.Cat_Id);
+            cmd.Parameters.AddWithValue("@art_img", article.Art_Img);
 
             cnn.Open();
             cmd.ExecuteNonQuery();
