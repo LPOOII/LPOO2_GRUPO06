@@ -92,6 +92,12 @@ namespace Vistas
             oOrder.Show();
         }
 
+        private void AcercaItem_Click(object sender, RoutedEventArgs e)
+        {
+            Acerca acerca = new Acerca();
+            acerca.Show(); 
+        }
+
         
 
     }

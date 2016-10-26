@@ -25,6 +25,7 @@
                 <MenuItem Header="_Usuarios" Name="Usuarios">
                     <MenuItem Header="Panel de usuarios" Foreground="Black"/>
                 </MenuItem>
+                <MenuItem Header="Acerca" Click="AcercaItem_Click" />
                 <MenuItem Header="Cerrar" Click="MenuItem_Click" />
             </Menu>
             <StackPanel></StackPanel>

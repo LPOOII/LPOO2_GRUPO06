@@ -14,7 +14,16 @@
         <!--LABELS Y TEXTBOXS-->
         <control:FormLogin x:Name="formLogin" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="6,16,231,27" Height="217" Width="288"></control:FormLogin>
         <!--BTN VENTANA-->
-            <Button Content="Cerrar" Height="23" HorizontalAlignment="Left" Margin="175,167,0,0" Name="btnCerrar" VerticalAlignment="Top" Width="80" Click="btnCerrar_Click" />
+            <Button  Height="23" HorizontalAlignment="Left" Margin="175,167,0,0" Name="btnCerrar" VerticalAlignment="Top" Width="80" Click="btnCerrar_Click">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold">Cerrar</TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
+                <Image Name="btnPrint" Source="/Vistas;component/images/delete-icon.png"></Image>
+            </Button>
         <!--BOTONERA PASSWORD-->
         <Button Content="1" Height="40" HorizontalAlignment="Left" Margin="317,24,0,0" Name="button1" VerticalAlignment="Top" Width="40" Click="mostrar"/>
         <Button Content="2" Height="40" HorizontalAlignment="Left" Margin="390,24,0,0" Name="button2" VerticalAlignment="Top" Width="40" Click="mostrar"/>
