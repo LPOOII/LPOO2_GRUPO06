@@ -5,7 +5,8 @@ using System.Text;
 using System.ComponentModel;
 
 namespace ClasesBase
-{
+{//INotifyPropertyChanged notifica los cambios
+    //interfase expone un evento que debe provocarse siempre que se realicen cambios en la colección
     public class Articulo : INotifyPropertyChanged
     {
         private int art_Id;
@@ -205,6 +206,14 @@ namespace ClasesBase
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(property));
             }
+        }
+
+        private string art_img;
+
+        public string Art_Img
+        {
+            get { return art_img; }
+            set { art_img = value; }
         }
 
        
